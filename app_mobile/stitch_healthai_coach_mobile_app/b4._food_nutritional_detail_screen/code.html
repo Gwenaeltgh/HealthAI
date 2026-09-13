@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Détails nutritionnels - HealthAI Coach</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hide scrollbar for cleaner UI */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen relative font-body-md text-body-md antialiased pb-[100px]">
+<!-- Header (Transactional - No global nav) -->
+<header class="fixed top-0 w-full z-40 bg-surface-bright/80 backdrop-blur-md border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-6 py-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-highest transition-colors text-on-surface">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-label-bold text-label-bold text-on-surface">Poulet rôti</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-highest transition-colors text-on-surface">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</header>
+<main class="w-full max-w-md mx-auto bg-surface-bright min-h-screen relative shadow-[0_0_40px_rgba(26,34,56,0.05)] pt-16">
+<!-- Hero Image Section -->
+<section class="relative w-full h-[280px]">
+<img alt="Poulet rôti" class="w-full h-full object-cover" data-alt="A high-quality, appetizing close-up photograph of beautifully roasted chicken (Poulet rôti) with crispy, golden-brown skin, resting on a clean, modern ceramic plate. The lighting is bright and natural, creating a fresh, healthy, and inviting mood that aligns with a premium 'Humanist-Data' wellness app aesthetic. The background is a soft, out-of-focus creamy off-white surface, subtly complemented by a hint of fresh green herbs, emphasizing a clean, clinical yet warm lifestyle vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOowrzJpOdCtJWw6YUlH4F0q9AO9dmsnBwn1tHIMYgAwxVktlIwb-4_mN9LWtgcu0I_ndqZjhw3BmIJll-oE0N1jpRR46tZj4DJ2hTjBh5VGczdWzsB5ujeQRWUf4zS3Ex8s4kV1oIISk9k7iqhX8RcOfIAcnNRn5UBtHbW_rmIYFjkJTxCtG3z_eaJMl_pc1eVW1uB1oI20pf39L1zjYrpzC27gPB-HPkmuDblINLNrHxx14zVPMsn4u7cucPbZRASL0rcAMJB9Tc"/>
+<!-- Subtle gradient overlay to blend into the content below -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-bright via-surface-bright/20 to-transparent"></div>
+</section>
+<!-- Main Content Canvas -->
+<section class="relative -mt-12 bg-surface-bright rounded-t-[32px] px-container-padding pt-8 pb-section-gap z-10 flex flex-col gap-section-gap">
+<!-- Calories & Portion -->
+<div class="flex flex-col items-center text-center">
+<div class="flex items-baseline gap-2">
+<span class="font-display-metrics text-display-metrics text-primary">239</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant">kcal</span>
+</div>
+<!-- Portion Selector -->
+<div class="mt-6 flex items-center gap-3 bg-surface-container rounded-full p-1 border border-outline-variant/30 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<input aria-label="Portion amount" class="w-20 bg-transparent border-none text-center font-label-bold text-label-bold text-on-surface focus:ring-0" type="number" value="150"/>
+<div class="w-[1px] h-6 bg-outline-variant/50"></div>
+<select aria-label="Portion unit" class="bg-transparent border-none pr-8 pl-4 py-2 font-body-md text-body-md text-on-surface focus:ring-0 appearance-none cursor-pointer">
+<option value="g">g</option>
+<option value="oz">oz</option>
+<option value="portion">portion</option>
+</select>
+</div>
+</div>
+<!-- Macros Bento Grid -->
+<div class="flex flex-col gap-stack-gap">
+<h2 class="font-h2-editorial text-h2-editorial text-on-surface">Macronutriments</h2>
+<div class="grid grid-cols-3 gap-3">
+<!-- Protéines (Green) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col items-center justify-center border border-outline-variant shadow-[0_2px_10px_rgba(26,34,56,0.02)]">
+<div class="relative w-16 h-16 mb-2">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="65, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-label-bold text-label-bold text-on-surface text-[12px]">27g</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px]">Protéines</span>
+<span class="font-label-bold text-label-bold text-primary text-[10px] mt-1">65%</span>
+</div>
+<!-- Glucides (Amber/Tertiary Container) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col items-center justify-center border border-outline-variant shadow-[0_2px_10px_rgba(26,34,56,0.02)]">
+<div class="relative w-16 h-16 mb-2">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="5, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-label-bold text-label-bold text-on-surface text-[12px]">0g</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px]">Glucides</span>
+<span class="font-label-bold text-label-bold text-tertiary-container text-[10px] mt-1">0%</span>
+</div>
+<!-- Lipides (Coral/Tertiary) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col items-center justify-center border border-outline-variant shadow-[0_2px_10px_rgba(26,34,56,0.02)]">
+<div class="relative w-16 h-16 mb-2">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="35, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-label-bold text-label-bold text-on-surface text-[12px]">14g</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px]">Lipides</span>
+<span class="font-label-bold text-label-bold text-tertiary text-[10px] mt-1">35%</span>
+</div>
+</div>
+</div>
+<!-- Détails nutritionnels Table -->
+<div class="flex flex-col gap-stack-gap mb-8">
+<h2 class="font-h2-editorial text-h2-editorial text-on-surface">Détails nutritionnels</h2>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<ul class="divide-y divide-outline-variant/50">
+<li class="flex justify-between items-center py-4 px-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Fibres</span>
+<span class="font-label-bold text-label-bold text-on-surface">0 g</span>
+</li>
+<li class="flex justify-between items-center py-4 px-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Sucres</span>
+<span class="font-label-bold text-label-bold text-on-surface">0 g</span>
+</li>
+<li class="flex justify-between items-center py-4 px-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Cholestérol</span>
+<span class="font-label-bold text-label-bold text-on-surface">88 mg</span>
+</li>
+<li class="flex justify-between items-center py-4 px-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Sodium</span>
+<span class="font-label-bold text-label-bold text-on-surface">82 mg</span>
+</li>
+<li class="flex justify-between items-center py-4 px-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Potassium</span>
+<span class="font-label-bold text-label-bold text-on-surface">223 mg</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Action (Replacing Bottom Nav for Task Focus) -->
+<div class="fixed bottom-0 w-full max-w-md left-1/2 transform -translate-x-1/2 bg-surface-bright/95 backdrop-blur-md border-t border-outline-variant/20 p-container-padding pb-8 z-50">
+<button class="w-full bg-primary text-on-primary rounded-full py-4 px-6 flex justify-center items-center gap-2 hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm active:scale-[0.98]">
+<span class="material-symbols-outlined fill">add_circle</span>
+<span class="font-label-bold text-label-bold">Ajouter au déjeuner</span>
+</button>
+</div>
+</body></html>

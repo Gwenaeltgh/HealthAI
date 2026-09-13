@@ -1,0 +1,9 @@
+# Ignore built dashboard assets (Vite)
+app/dist/
+
+# Common
+node_modules/
+.next/
+out/
+dist/
+coverage/

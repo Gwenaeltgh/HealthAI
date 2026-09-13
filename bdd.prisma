@@ -1,0 +1,197 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Utilisateur {
+  id                          Int      @id @default(autoincrement())
+  nom                         String
+  age                         Int
+  gender                      String
+  poids                       Float
+  taille                      Float
+  disease_type                String?
+  disease_severity            String?
+  daily_caloric_intake        Int?
+  adherence_to_diet_plan      Float?
+  physical_activity_level     String?
+  enterprise_id               Int?
+  createdAt                   DateTime @default(now())
+
+  meals                       Meal[]
+  userExercises               UserExercise[]
+  restrictions                UserDietaryRestriction[]
+  allergies                  UserAllergy[]
+  recommendations             Recommendation[]
+
+  enterprise                  Enterprise? @relation(fields: [enterprise_id], references: [id])
+
+  @@index([enterprise_id])
+}
+
+model DietaryRestriction {
+  id      Int    @id @default(autoincrement())
+  name    String
+
+  users   UserDietaryRestriction[]
+}
+
+model UserDietaryRestriction {
+  user_id        Int
+  restriction_id Int
+
+  user           Utilisateur       @relation(fields: [user_id], references: [id])
+  restriction    DietaryRestriction @relation(fields: [restriction_id], references: [id])
+
+  @@id([user_id, restriction_id])
+}
+
+model Allergy {
+  id    Int    @id @default(autoincrement())
+  name  String
+
+  users UserAllergy[]
+}
+
+model UserAllergy {
+  user_id    Int
+  allergy_id Int
+
+  user       Utilisateur @relation(fields: [user_id], references: [id])
+  allergy    Allergy     @relation(fields: [allergy_id], references: [id])
+
+  @@id([user_id, allergy_id])
+}
+
+model Food {
+  id             Int     @id @default(autoincrement())
+  name           String
+  category       String
+  calories       Float
+  protein        Float
+  carbohydrates  Float
+  fat            Float
+  fiber          Float
+  sugars         Float
+  sodium         Float
+  cholesterol    Float
+
+  meals          MealFood[]
+}
+
+model Meal {
+  id             Int       @id @default(autoincrement())
+  user_id        Int
+  meal_type      String
+  date           DateTime
+  total_calories Float?
+  water_intake   Float?
+
+  user           Utilisateur @relation(fields: [user_id], references: [id])
+  foods          MealFood[]
+}
+
+model MealFood {
+  meal_id  Int
+  food_id  Int
+  quantity Float
+
+  meal     Meal @relation(fields: [meal_id], references: [id])
+  food     Food @relation(fields: [food_id], references: [id])
+
+  @@id([meal_id, food_id])
+}
+
+model Exercise {
+  id             Int    @id @default(autoincrement())
+  name           String
+  equipment      String?
+  body_part      String?
+  exercise_type  String?
+
+  targets        ExerciseTargetMuscle[]
+  secondary      ExerciseSecondaryMuscle[]
+  userExercises  UserExercise[]
+}
+
+model Muscle {
+  id    Int    @id @default(autoincrement())
+  name  String
+
+  targets   ExerciseTargetMuscle[]
+  secondary ExerciseSecondaryMuscle[]
+}
+
+model ExerciseTargetMuscle {
+  exercise_id Int
+  muscle_id   Int
+
+  exercise    Exercise @relation(fields: [exercise_id], references: [id])
+  muscle      Muscle   @relation(fields: [muscle_id], references: [id])
+
+  @@id([exercise_id, muscle_id])
+}
+
+model ExerciseSecondaryMuscle {
+  exercise_id Int
+  muscle_id   Int
+
+  exercise    Exercise @relation(fields: [exercise_id], references: [id])
+  muscle      Muscle   @relation(fields: [muscle_id], references: [id])
+
+  @@id([exercise_id, muscle_id])
+}
+
+model UserExercise {
+  id               Int      @id @default(autoincrement())
+  user_id          Int
+  exercise_id      Int
+  duration         Int
+  calories_burned  Float?
+  date             DateTime
+
+  user             Utilisateur @relation(fields: [user_id], references: [id])
+  exercise         Exercise    @relation(fields: [exercise_id], references: [id])
+}
+
+model Recommendation {
+  id           Int      @id @default(autoincrement())
+  user_id      Int
+  type         String
+  reference_id Int
+  score        Float?
+  reason       String?
+  created_at   DateTime @default(now())
+
+  user         Utilisateur @relation(fields: [user_id], references: [id])
+}
+
+model Admin {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Enterprise {
+  id           Int      @id @default(autoincrement())
+  slug         String   @unique
+  name         String
+  email        String   @unique
+  passwordHash String
+  sector       String?
+  createdAt    DateTime @default(now())
+
+  users        Utilisateur[]
+}
+
+model AppSetting {
+  key       String   @id
+  value     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

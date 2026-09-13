@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meal Detail Screen - HealthAI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "h1-editorial": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h2-editorial": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                        "display-metrics": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased pb-24 md:pb-0">
+<!-- Top App Bar - Hybrid generated for subpage (Linear/Transactional intent to hide shell, but user requested Coach active tab) -->
+<!-- Based on JSON logic: Task-focused subpage with 'Back' action implies temporary departure, but user prompt demands Bottom tab bar with Coach active. We follow JSON conflict rule: Suppress nav if linear/transactional. However, to fulfill the prompt constraint directly: "Bottom tab bar with Coach active", we will render the bottom bar despite the semantic shell logic suggesting suppression for detail screens. For TopAppBar, we use standard detail view header. -->
+<header class="bg-surface-container-lowest text-on-surface sticky top-0 z-40 border-b border-outline-variant/30 flex justify-between items-center w-full px-6 py-4">
+<button class="text-on-surface hover:text-primary transition-colors flex items-center justify-center p-2 -ml-2 rounded-full active:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-h2-editorial text-h2-editorial text-on-surface">Déjeuner</h1>
+<button class="text-on-surface hover:text-primary transition-colors flex items-center justify-center p-2 -mr-2 rounded-full active:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="flex-1 px-container-padding py-section-gap max-w-3xl mx-auto w-full flex flex-col gap-section-gap relative">
+<!-- Meal Summary Card -->
+<section class="bg-surface-container-lowest rounded-[16px] p-container-padding border border-outline-variant/30 shadow-sm flex flex-col gap-stack-gap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="local_fire_department">local_fire_department</span>
+<h2 class="font-label-bold text-label-bold text-on-surface-variant">ÉNERGIE</h2>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-metrics text-display-metrics text-on-surface">542</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 717 kcal</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden mt-2">
+<div class="h-full bg-primary rounded-full" style="width: 75%;"></div>
+</div>
+<!-- Macro Breakdown -->
+<div class="grid grid-cols-3 gap-gutter pt-4 mt-2 border-t border-outline-variant/30">
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase text-xs tracking-wider">Protéines</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold mt-1">42g</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1 max-w-[40px]">
+<div class="h-full bg-primary-container rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase text-xs tracking-wider">Glucides</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold mt-1">48g</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1 max-w-[40px]">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase text-xs tracking-wider">Lipides</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold mt-1">18g</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1 max-w-[40px]">
+<div class="h-full bg-secondary-fixed rounded-full" style="width: 30%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aliments Section -->
+<section class="flex flex-col gap-stack-gap">
+<h3 class="font-h2-editorial text-h2-editorial text-on-surface">Aliments</h3>
+<div class="flex flex-col gap-base">
+<!-- Food Card 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 border border-outline-variant/30 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:border-primary/30 transition-colors">
+<img alt="Poulet rôti" class="w-16 h-16 rounded-lg object-cover" data-alt="A close-up food photography shot of a perfectly golden roasted chicken breast slice on a clean white plate. The lighting is soft, natural, and bright, enhancing the appetizing texture of the crispy skin and juicy meat. The setting is minimal and modern, fitting a high-end wellness app aesthetic with soft cream and subtle natural green accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk9gwEZywpDkrrLi9b_mqMxVHCoUF5swMDLxXSQ_q3hXxOV9acGSbWOP1HLcynK2aB6cQx5VxGCH90T7emlOuucsnNw1B2GvjIs3cWTNpaOEi8B56ekzr5vMFCbers6shBbXNXFKziVluiXw4A_B_YzRLJllGwBojAF0bmRhndDGSA7lryUejSTAqO5A2Bt1Drc5vmL1xaPR-2LIm4Gn2JigjIeI3hDafxEiT80DYxaz_CaCFGV92lNAgv8tvmkmAP43mCeGfdZtxl"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Poulet rôti</h4>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">150g • Blanc sans peau</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-bold text-label-bold text-on-surface">247 kcal</span>
+<span class="material-symbols-outlined text-outline mt-1 text-[20px]" data-icon="swipe_left">swipe_left</span>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 border border-outline-variant/30 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:border-primary/30 transition-colors">
+<img alt="Quinoa" class="w-16 h-16 rounded-lg object-cover" data-alt="A top-down view of a small ceramic bowl filled with fluffy cooked quinoa. The lighting is bright and even, highlighting the individual grains and the light, healthy nature of the dish. The background is a soft, minimalist cream surface, aligning with a clean, clinical yet approachable wellness brand aesthetic. Subtle natural shadows provide depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE5tkTsOL2jJsmHkvrADPvNEsW9UUAJc560tiYB5oJmfeZSox409HhhnZ8ESa9_UK6ecYRb5HcW0bB5yf_f6E33VHzIUBIR_1RSTRcEX3UTbofRRJfUGyOnoyNCYxO1W1NVTrt653aUAWpSBCE8fJvOvdQvL6DLRRIMJYHthzHdHT3FDM1ByFUOg15dXeo_nb0muNoz_IpW9k4-6SizWMKuKOuZq61tqvxozOtnqaGOSl0_FADo-v3D6Va8y8_GeiUDskK_CuAbsnk"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Quinoa cuit</h4>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">100g</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-bold text-label-bold text-on-surface">120 kcal</span>
+<span class="material-symbols-outlined text-outline mt-1 text-[20px]" data-icon="swipe_left">swipe_left</span>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 border border-outline-variant/30 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:border-primary/30 transition-colors">
+<img alt="Brocoli" class="w-16 h-16 rounded-lg object-cover" data-alt="Vibrant green steamed broccoli florets arranged neatly in a minimalist shallow bowl. The lighting is crisp and highlights the fresh, textured surface of the vegetables. The surrounding environment is a clean, bright white and soft cream palette, typical of a modern dietary app's visual style. The image evokes freshness and health." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCedF3i7aqS4crkToxjIJRtgCwT8OoJQs0TJcl92cQal2MyWvmy1hQaB9q9iFC8JdqDCt4H6wXYDNmHqmfLGt33XvGQwYzGD0oJuH_23_lzSDWiOvRdoBIjV5b5-yMA5s2Jk0dGCXN0nuS1ol-NyMIG5sWXX0qip2dIboArBBl55fCtYU3sT689va575e9fYjfNVISvjqV3ZicAAplepfFQQCRDv9GGKShuRqkxg5FJw5-k6U-OftY2HMI65wllXU8rrKXEneKkSihs"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Brocoli vapeur</h4>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">150g</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-bold text-label-bold text-on-surface">52 kcal</span>
+<span class="material-symbols-outlined text-outline mt-1 text-[20px]" data-icon="swipe_left">swipe_left</span>
+</div>
+</div>
+<!-- Food Card 4 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-4 border border-outline-variant/30 shadow-sm flex items-center gap-4 relative overflow-hidden group hover:border-primary/30 transition-colors">
+<img alt="Avocat" class="w-16 h-16 rounded-lg object-cover" data-alt="Half of a ripe avocado with the pit removed, resting on a clean, light-colored wooden cutting board. The lighting is soft and natural, emphasizing the creamy texture and vibrant green gradient of the avocado flesh. The overall aesthetic is fresh, minimalist, and aligned with a health-conscious lifestyle brand, featuring soft cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_GlmGXOzYS8pYPQOEB2cmtULxfkfjM2aFFVQse0AlLy3eml6coWYCyRZnTvFvGny_cyj9WzaWcW7k1dwV0DpxEArg-tVe_evfWrPJAngqTtXKrJmXMYnpKwdgjfglN2u5UOCxDZqksdNAxnVXYyJrrtdAmHZoGqOATHghuNK2lqu-VQtcObUvULe3zJUHE3wUTGHS5vmL_EY4Bo1nwDmWc0N7A8He7Vu1p3GjzZaVCbWXCtBE5EIwRti7RvPB-m9enRNxJipGvl1s"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Avocat</h4>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">75g • Moitié</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-bold text-label-bold text-on-surface">123 kcal</span>
+<span class="material-symbols-outlined text-outline mt-1 text-[20px]" data-icon="swipe_left">swipe_left</span>
+</div>
+</div>
+</div>
+<button class="mt-4 py-3 px-6 rounded-full border-2 border-primary text-primary font-label-bold text-label-bold text-center hover:bg-primary/5 transition-colors">
+                Ajouter un aliment
+            </button>
+</section>
+<!-- Green FAB -->
+<button class="fixed bottom-28 md:bottom-10 right-6 w-14 h-14 bg-primary text-on-primary rounded-xl flex items-center justify-center shadow-lg hover:bg-primary/90 transition-transform active:scale-95 z-30">
+<span class="material-symbols-outlined text-[28px]" data-icon="add">add</span>
+</button>
+</main>
+<!-- Bottom Nav Bar from JSON -->
+<!-- JSON explicitly requires: Coach, Journal, Feed, IA, Profil. Active state: Coach. -->
+<nav class="bg-surface-container-lowest text-primary-container font-sans text-[11px] font-bold uppercase tracking-wider docked full-width bottom-0 rounded-t-[32px] border-t border-outline-variant/10 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)] fixed left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden">
+<!-- Active Tab: Coach -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary rounded-full px-5 py-2 hover:text-on-primary transition-all Active: scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined filled mb-1" data-icon="psychology" data-weight="fill">psychology</span>
+<span>Coach</span>
+</a>
+<!-- Inactive Tab: Journal -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 px-5 py-2 hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span>Journal</span>
+</a>
+<!-- Inactive Tab: Feed -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 px-5 py-2 hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="forum">forum</span>
+<span>Feed</span>
+</a>
+<!-- Inactive Tab: IA -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 px-5 py-2 hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="smart_toy">smart_toy</span>
+<span>IA</span>
+</a>
+<!-- Inactive Tab: Profil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 px-5 py-2 hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span>Profil</span>
+</a>
+</nav>
+</body></html>

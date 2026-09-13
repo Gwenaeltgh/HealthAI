@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - HealthAI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md flex flex-col antialiased">
+<!-- Header Area (Task-focused sub-page, no bottom nav) -->
+<header class="sticky top-0 z-10 bg-background/90 backdrop-blur-md pt-6 pb-4 px-container-padding flex flex-col gap-4">
+<!-- Top Nav Row -->
+<div class="flex items-center justify-between w-full">
+<button aria-label="Retour" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-h2-editorial text-h2-editorial text-on-surface flex-1 text-center">
+                Notifications
+            </h1>
+<!-- Spacer to balance the back button visually, or an empty div if needed -->
+<div class="w-10 h-10"></div>
+</div>
+<!-- Action & Tabs Row -->
+<div class="flex items-center justify-between w-full">
+<!-- Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar flex-1">
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold px-4 py-2 rounded-full whitespace-nowrap shadow-sm">
+                    Tout
+                </button>
+<button class="bg-surface-container-lowest text-on-surface font-label-bold text-label-bold px-4 py-2 rounded-full border border-outline-variant whitespace-nowrap hover:bg-surface-container transition-colors">
+                    Mentions
+                </button>
+<button class="bg-surface-container-lowest text-on-surface font-label-bold text-label-bold px-4 py-2 rounded-full border border-outline-variant whitespace-nowrap hover:bg-surface-container transition-colors">
+                    J'aime
+                </button>
+</div>
+<!-- Mark all as read -->
+<button class="font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors pl-4 whitespace-nowrap">
+                Tout marquer comme lu
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-container-padding pb-section-gap flex flex-col gap-stack-gap">
+<!-- Unread Notification Item -->
+<article class="flex gap-4 p-4 rounded-xl bg-surface-container-lowest border border-primary/20 shadow-[0_2px_10px_0_rgba(0,0,0,0.02)] relative overflow-hidden group hover:bg-surface-container-low transition-colors cursor-pointer items-start">
+<!-- Green Dot for Unread -->
+<div class="w-2.5 h-2.5 rounded-full bg-primary mt-3 flex-shrink-0 shadow-[0_0_8px_rgba(0,106,98,0.4)]"></div>
+<!-- Avatar -->
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A softly lit, minimalist portrait of a young woman with a warm smile. She is framed closely against a bright, airy background that reflects a clean, modern light-mode aesthetic. Her clothing features a subtle teal accent, perfectly echoing the primary brand colors of a humanist health and wellness application. The mood is approachable, empathetic, and clinically precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVj2q6uwdElbYpfnMWRzLMebs090HDjgI59tGx32gXBpilCpnAugiF4jd4bECbvKI9Tr1dlzj_F47Pa9RXsVV5ZAbAkAvVbDm51SRtZCRkcnwrcy2PLtxJS8bFPf2jJnw72nBu1N4Lu48A56Rsl3iPkcofNmcIXNK9Y8dxVp11OIXB411SQp3WFUqabf5nsIp8wrejSv9npV-Giv-T-bIKhWI_IZYz8aZRcjC5G5kUIrqt38U0ZHXnZYeVIzASA0qu0dIv8Odq5Lwv"/>
+</div>
+<!-- Content -->
+<div class="flex-1 flex flex-col gap-1">
+<p class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-label-bold text-label-bold text-on-surface">Sarah</span> a aimé ta publication.
+                </p>
+<p class="font-body-md text-body-md text-outline" style="font-size: 13px; line-height: 18px;">
+                    Il y a 2 minutes
+                </p>
+</div>
+</article>
+<!-- Unread Notification Item -->
+<article class="flex gap-4 p-4 rounded-xl bg-surface-container-lowest border border-primary/20 shadow-[0_2px_10px_0_rgba(0,0,0,0.02)] relative overflow-hidden group hover:bg-surface-container-low transition-colors cursor-pointer items-start">
+<!-- Green Dot for Unread -->
+<div class="w-2.5 h-2.5 rounded-full bg-primary mt-3 flex-shrink-0 shadow-[0_0_8px_rgba(0,106,98,0.4)]"></div>
+<!-- Avatar (System/Mascot) -->
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-[#FFFCF7] border border-outline-variant/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px; font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<!-- Content -->
+<div class="flex-1 flex flex-col gap-1">
+<p class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-label-bold text-label-bold text-on-surface">Coach L'Avocat</span> a analysé tes données de sommeil. Découvre tes nouveaux conseils personnalisés.
+                </p>
+<p class="font-body-md text-body-md text-outline" style="font-size: 13px; line-height: 18px;">
+                    Il y a 1 heure
+                </p>
+</div>
+</article>
+<!-- Read Notification Item -->
+<article class="flex gap-4 p-4 rounded-xl bg-transparent relative overflow-hidden group hover:bg-surface-container-lowest transition-colors cursor-pointer items-start">
+<!-- Spacer for missing dot -->
+<div class="w-2.5 h-2.5 rounded-full mt-3 flex-shrink-0 bg-transparent"></div>
+<!-- Avatar -->
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale-[20%] opacity-90" data-alt="A high-quality, evenly lit headshot of a young man looking directly at the camera with a gentle, encouraging expression. The background is a stark, clean cream color that seamlessly blends with the minimalist UI design system. The lighting is soft and shadowless, avoiding any harsh clinical feel while maintaining a highly professional, trustworthy wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoDqIt_67IPxdZQqAKYmLKH0FI_8qewVmzfuMQsIvXwMUjx5ZNDuwi-4aTmsn6JqcHuqX5qBIYc-wrEYE0Tng7OGLJH0rE_n0H9q9AC-aPbN8AFqdcpsAIa2tyYhN5AMt9_ufS6QiwOzgiw0-58-eiubieEfc3-zy4tZwQjUzMALisab9ety-z48xVR-4OTZ915Frj_532mJRnb_Dh7PaQbG_OqVmK56ox4tSmyQON3cjUB9i_5WkLgjxYJDl3Dk0kI7Tk9UvQxiaw"/>
+</div>
+<!-- Content -->
+<div class="flex-1 flex flex-col gap-1 opacity-80">
+<p class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-label-bold text-label-bold text-on-surface">Thomas</span> t'a mentionné dans un commentaire: "Super progression cette semaine !"
+                </p>
+<p class="font-body-md text-body-md text-outline" style="font-size: 13px; line-height: 18px;">
+                    Hier à 14h30
+                </p>
+</div>
+</article>
+<!-- Read Notification Item -->
+<article class="flex gap-4 p-4 rounded-xl bg-transparent relative overflow-hidden group hover:bg-surface-container-lowest transition-colors cursor-pointer items-start">
+<!-- Spacer for missing dot -->
+<div class="w-2.5 h-2.5 rounded-full mt-3 flex-shrink-0 bg-transparent"></div>
+<!-- Avatar (Icon) -->
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<!-- Content -->
+<div class="flex-1 flex flex-col gap-1 opacity-80">
+<p class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-label-bold text-label-bold text-on-surface">Objectif atteint</span> : Tu as complété tes 10 000 pas pour le 3ème jour consécutif.
+                </p>
+<p class="font-body-md text-body-md text-outline" style="font-size: 13px; line-height: 18px;">
+                    Hier à 18h45
+                </p>
+</div>
+</article>
+</main>
+</body></html>

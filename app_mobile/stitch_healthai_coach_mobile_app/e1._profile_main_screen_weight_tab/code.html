@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthAI Coach - Profil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-40 bg-[#FFFCF7] dark:bg-slate-950 border-b border-[#1A2238]/10 dark:border-white/10">
+<div class="flex items-center gap-3">
+<img alt="Mascot" class="w-10 h-10 rounded-full object-cover border border-outline-variant/30" data-alt="A stylized, flat 2D digital illustration of a friendly green avocado mascot. The character has small, simple eyes and a slight smile, rendered in a modern vector art style. It sits against a warm, soft cream background, perfectly matching the Humanist-Data aesthetic of a wellness app. The lighting is uniform and bright, conveying approachability and health." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAIqr4t2w9fR3SAtXuWPOy_n-vJ2vLLWIYLAOtXvrtj_BbI2XsUsSGbzqtPUAjUEb_uY-i0yD-MB3OcUyuGjrXhqg3wDpW_xqjtsGs11MQUhO7kCxHaBQ4Tp1Jh9NMZ2wPY7n2KwPOCKHtFVEVw4bURKtPA2FLzjjsza6m6CECt1IoK3RNG71do_FgoYA2Kg63Xv4D7wO2_z4SPeq6t5MIcstZgyqQpTFtEt43GKrXI2irQtOaAep3deWds6vdoEIlAEtRkzA06iZi"/>
+<h1 class="font-serif text-lg font-bold text-[#1A2238] dark:text-white">HealthAI Coach</h1>
+</div>
+<button class="text-[#1A2238]/60 dark:text-white/60 hover:bg-[#2EC4B6]/10 transition-colors scale-95 active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Profile Header Section -->
+<section class="bg-surface-container px-container-padding py-8 rounded-b-[32px] md:rounded-none relative z-10">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-5">
+<img alt="Orias Profile" class="w-[80px] h-[80px] rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" data-alt="A close-up portrait photography of a young man in his late 20s, featuring soft, natural daytime lighting. He has a relaxed, friendly expression, wearing a simple organic cotton t-shirt. The background is slightly blurred and features warm, earthy tones that complement the Humanist-Data design system. The overall mood is approachable, healthy, and authentic, fitting for a modern wellness application profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0siHy6K5aMAF6JtzzQsMdRVtb2j-43FH9_pOzUPkca49hw2mRdAuIqNoVwmOI3Tk8E9JZX-mUzoBRx8wpIxqtx1WEYUIa4wD7M7mqZZ_qU5q2PLJqlW_mnATGL2b1GJzlxpUxUqdeg0KiUuHUb85VJObCYZftS1IjYTCJBYZ7bOiDUQl0-WQaF9jmH-NXuZ12v4efM4R21CuQyVA-DyMzoFdv2N8anKgn_mCaa6nFC_cyXmt8H7KWtByOThBB_BzpnQQkuNXpJm5C"/>
+<div class="flex flex-col gap-1">
+<h2 class="font-h2-editorial text-h2-editorial text-on-surface m-0 p-0 leading-none">Orias</h2>
+<span class="inline-flex items-center gap-1.5 bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full font-label-bold text-[12px] mt-1">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                            Perdre du poids
+                        </span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</section>
+<!-- Navigation Tabs -->
+<nav class="flex px-container-padding mt-4 border-b border-outline-variant/30">
+<button class="py-3 mr-8 border-b-2 border-primary-container text-primary-container font-label-bold text-label-bold relative">
+                Poids
+            </button>
+<button class="py-3 text-on-surface-variant hover:text-on-surface font-label-bold text-label-bold transition-colors">
+                Alimentation
+            </button>
+</nav>
+<!-- Stats Bento Grid -->
+<section class="px-container-padding py-8">
+<div class="grid grid-cols-3 gap-3">
+<!-- Départ -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center border border-outline-variant/30 relative overflow-hidden">
+<span class="text-on-surface-variant font-label-bold text-[11px] uppercase tracking-wider mb-1 z-10">Départ</span>
+<div class="flex items-baseline gap-1 z-10">
+<span class="font-display-metrics text-display-metrics text-on-surface leading-none">80</span>
+<span class="font-body-md text-on-surface-variant font-medium">kg</span>
+</div>
+</div>
+<!-- Actuel -->
+<div class="bg-primary-container/10 rounded-xl p-4 flex flex-col items-center justify-center border border-primary-container/30 relative overflow-hidden shadow-[0_4px_12px_rgba(46,196,182,0.08)]">
+<span class="text-primary-container font-label-bold text-[11px] uppercase tracking-wider mb-1 z-10">Actuel</span>
+<div class="flex items-baseline gap-1 z-10">
+<span class="font-display-metrics text-display-metrics text-primary-container leading-none">74</span>
+<span class="font-body-md text-primary-container font-medium">kg</span>
+</div>
+<!-- Subtle decorative background element -->
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary-container/10 rounded-full blur-xl"></div>
+</div>
+<!-- Souhaité -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center border border-outline-variant/30 relative overflow-hidden">
+<span class="text-on-surface-variant font-label-bold text-[11px] uppercase tracking-wider mb-1 z-10">Souhaité</span>
+<div class="flex items-baseline gap-1 z-10">
+<span class="font-display-metrics text-display-metrics text-on-surface leading-none">70</span>
+<span class="font-body-md text-on-surface-variant font-medium">kg</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<section class="px-container-padding pb-section-gap">
+<button class="w-full bg-on-surface text-surface py-4 rounded-full font-label-bold text-label-bold flex items-center justify-center gap-2 hover:bg-on-surface/90 transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">add</span>
+                Ajouter une pesée
+            </button>
+</section>
+<!-- Chart Section -->
+<section class="px-container-padding pb-section-gap flex-grow">
+<h3 class="font-h2-editorial text-h2-editorial text-on-surface mb-6">Objectif de poids</h3>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/40 shadow-sm relative w-full h-[240px] flex flex-col justify-end">
+<!-- Abstracted Chart Representation -->
+<div class="absolute inset-0 p-6 flex flex-col">
+<!-- Grid Lines -->
+<div class="flex-grow flex flex-col justify-between border-l border-b border-outline-variant/20 pb-6 pl-2">
+<div class="w-full h-px bg-outline-variant/20 border-dashed border-b relative">
+<span class="absolute -left-6 -top-2 text-[10px] text-on-surface-variant">80</span>
+</div>
+<div class="w-full h-px bg-outline-variant/20 border-dashed border-b relative">
+<span class="absolute -left-6 -top-2 text-[10px] text-on-surface-variant">75</span>
+</div>
+<div class="w-full h-px bg-outline-variant/20 border-dashed border-b relative">
+<span class="absolute -left-6 -top-2 text-[10px] text-on-surface-variant">70</span>
+</div>
+</div>
+<!-- X Axis Labels -->
+<div class="flex justify-between px-2 pt-2 text-[10px] text-on-surface-variant font-medium">
+<span>Juil</span>
+<span>Août</span>
+<span>Sept</span>
+<span>Oct</span>
+</div>
+</div>
+<!-- SVG Line -->
+<svg class="absolute inset-0 w-full h-full p-6 pt-8 pb-10 pl-8 overflow-visible" preserveaspectratio="none" viewbox="0 0 100 100">
+<!-- Goal Line -->
+<line stroke="#bbcac6" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="100" y1="80" y2="80"></line>
+<!-- Progress Line -->
+<path d="M 0 10 Q 20 20, 30 40 T 70 50 T 100 65" fill="none" stroke="#2ec4b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="0" cy="10" fill="#ffffff" r="3" stroke="#2ec4b6" stroke-width="2"></circle>
+<circle cx="30" cy="40" fill="#ffffff" r="3" stroke="#2ec4b6" stroke-width="2"></circle>
+<circle cx="70" cy="50" fill="#ffffff" r="3" stroke="#2ec4b6" stroke-width="2"></circle>
+<circle cx="100" cy="65" fill="#2ec4b6" r="4"></circle>
+</svg>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 rounded-t-[32px] border-t border-[#1A2238]/5 dark:border-white/5 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)]">
+<!-- Coach -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">psychology</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Coach</span>
+</button>
+<!-- Journal -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">menu_book</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Journal</span>
+</button>
+<!-- Feed -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">forum</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Feed</span>
+</button>
+<!-- IA -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">smart_toy</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">IA</span>
+</button>
+<!-- Profil (Active) -->
+<button class="flex flex-col items-center justify-center bg-[#2EC4B6] text-white rounded-full px-5 py-2 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Profil</span>
+</button>
+</nav>
+</body></html>

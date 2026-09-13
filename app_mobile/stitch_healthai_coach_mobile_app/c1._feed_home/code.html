@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthAI Coach - Feed Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FFFCF7] text-on-background min-h-screen font-body-md text-body-md pb-24 selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-[#FFFCF7] text-[#2EC4B6] font-serif text-lg font-bold text-[#1A2238] font-serif font-black text-[#1A2238] docked full-width top-0 border-b border-[#1A2238]/10 flat no shadows flex justify-between items-center w-full px-6 py-4 sticky z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden shrink-0 border border-[#1A2238]/10 flex items-center justify-center">
+<img alt="L'Avocat mascot" class="w-full h-full object-cover" data-alt="A cute, friendly 2D flat illustration of an avocado character with a smiling face, rendered in soft organic greens against a cream background. The style is modern, approachable, and minimalist, designed to evoke a sense of well-being and approachability in a health-tech context. Soft lighting, high key, vector art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7w60Gv5-tZzJtWCeoP_2zry0NEwGr0ig-Go8VwxsbEBTTRRTDJoyWSJkfhrXe9ysACyeJJ7mDEO-vcBY6Ssl0zOEDlCeLDMwzfn49-KgVgLRncJCOIrwDv36rYLbQCzaKtJud8-GjI-zuzqGyAHdmb2oaaL92UKNXQqU84FBZ_NeQ_ks8dCvTMjmjA2Q1tesQGXLJ2GS6OAqAPLcKrwspzZVVNLU76hh0D20XdFsRnXPZQjiFnIAZ95WRFT7WZhf5Emq_Hs4Leec"/>
+</div>
+<h1 class="font-h1-editorial text-h1-editorial text-[#1A2238] text-[24px] leading-tight">HealthAI Coach</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#2EC4B6]/10 transition-colors w-10 h-10 rounded-full flex items-center justify-center scale-95 active:duration-150 text-[#1A2238]/60">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="bg-primary-container text-white hover:bg-primary-container/90 transition-colors w-10 h-10 rounded-full flex items-center justify-center scale-95 active:duration-150 shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-[600px] mx-auto w-full pt-6 px-4 md:px-0">
+<!-- Filter Chips -->
+<div class="flex items-center gap-3 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x">
+<button class="shrink-0 snap-start px-4 py-2 rounded-full bg-primary-container text-white font-label-bold text-label-bold shadow-sm transition-all">Pour toi</button>
+<button class="shrink-0 snap-start px-4 py-2 rounded-full bg-surface-container border border-[#1A2238]/10 text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-container-high transition-all">Suivis</button>
+<button class="shrink-0 snap-start px-4 py-2 rounded-full bg-surface-container border border-[#1A2238]/10 text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-container-high transition-all">Populaires</button>
+<button class="shrink-0 snap-start px-4 py-2 rounded-full bg-secondary-container/50 border border-[#1A2238]/10 text-on-secondary-container font-label-bold text-label-bold hover:bg-secondary-container/80 transition-all">#nutrition</button>
+</div>
+<!-- Feed List -->
+<div class="flex flex-col gap-6 mt-2">
+<!-- Post Card 1 -->
+<article class="bg-white rounded-[16px] p-container-padding shadow-[0_2px_10px_rgba(26,34,56,0.02)] border border-[#1A2238]/5">
+<!-- Header -->
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="A portrait of a young woman with a warm smile, wearing athletic clothing. Soft, natural sunlight highlights her face. The background is slightly blurred, suggesting a sunny outdoor park setting. The image exudes a positive, energetic, and healthy lifestyle aesthetic consistent with modern wellness branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhs5tT4spOs_iPlrNSt2kzMliWmCxdtaZfv7Tc3zOvuc5ixH-Pn0u_Dd6AVPRZSD68F18Da_XaKnMsfPtyE267d06qOmnrqMTDa5A3qulc5UCkfN0o1_r0q_FJoviV9yPDo9zpuhNSDLUsWIZnIF9U4j9iNRQkkQ5-odOxT4A-EJ_jBmQlzvRBoePrsLpDbQ-_uGzCZM-PEMCwlvEQDuFM1rjtwmxugwLdDYStTV1gn1oDVXX-ajzUnlVwucUMf1V5Udvssol4g_L_"/>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Camille Dubois</h3>
+<p class="text-[12px] text-on-surface-variant/70 mt-0.5">il y a 3h</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container rounded-full p-1 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Body -->
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Super séance de yoga ce matin ! 🧘‍♀️ Je sens déjà les bienfaits sur ma posture et mon niveau de stress. Qui d'autre a intégré le yoga à sa routine matinale ?
+                </p>
+<!-- Media -->
+<div class="rounded-[16px] overflow-hidden mb-5 aspect-video bg-surface-container">
+<img alt="Post image" class="w-full h-full object-cover" data-alt="A bright, airy yoga studio setting showing a person performing a graceful yoga pose on a pale green mat. The lighting is soft and natural, streaming through large windows, creating a serene and calming mood. The color palette is composed of warm creams, subtle teal accents, and neutral tones, perfectly aligning with a sophisticated 'Humanist-Data' wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlIipP--YKU8nvExtD5mWc8XrVwH9w2V3jCJdkIEI5Xpz--3YUf831rk0lfWLRrbVupcDzzR3SUfr3pLva0AZE-7FLpC-Yl3IoVmthO8plAIUHw35yW5JC7tkxh6A1sJiGhKbZGsOL5ntgz85LyyJdMiwp4AYFJhV_djZlGSK9E_-WrLfF6U47A10iNjKJM5XmaiGwSBZ12VyfX3Fvv6yiiqIthIEMheDZAqhK9I0IvcbQpBTuK5pptFB4-eoRYKdum9eHLUjw0ZQe"/>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#yoga</span>
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#bienêtre</span>
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#morningroutine</span>
+</div>
+<!-- Action Row -->
+<div class="flex items-center justify-between border-t border-[#1A2238]/5 pt-4">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-1.5 text-[#ba1a1a] group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-bold text-[13px]">124</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">chat_bubble</span>
+<span class="font-label-bold text-[13px]">28</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">bookmark</span>
+</button>
+</div>
+</article>
+<!-- Post Card 2 -->
+<article class="bg-white rounded-[16px] p-container-padding shadow-[0_2px_10px_rgba(26,34,56,0.02)] border border-[#1A2238]/5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="A portrait of a young man smiling warmly. He has a clean, modern look. The lighting is soft and studio-quality against a clean, warm cream background. The aesthetic conveys trust, approachability, and professional expertise consistent with the 'Le Coach Bienveillant' persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzw8AsKgEn-lMYI0XtEfe-GDdoAKMlbQ6nKlnckGe4EZorqqdjvtMvtjNTtIHVl94LmSZ5z2XulftowCe-Gmqpfj0q7hw8-Zvd5gOHbWka7MFfEGnObYQXKKCtqFTuRWhGBq2i33FT200SvCrvG-aciJHNLG_l-X96TcybTWN4ZedzFAXltsvnVXvSCe6vhsnuDPFdjyCD4mVNoi48uNSva-4SE1Tj9daZk_cDnLTRQp1E6gfs0bT5eaRsa8PWxQizJ5iNguwC4rpD"/>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Dr. Martin Leblanc</h3>
+<p class="text-[12px] text-on-surface-variant/70 mt-0.5">il y a 5h</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container rounded-full p-1 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    L'hydratation est clé pour maintenir votre énergie tout au long de la journée. Un rappel simple : visez au moins 1,5L d'eau par jour. Voici ma nouvelle gourde préférée qui m'aide à suivre ma consommation ! 💧
+                </p>
+<div class="rounded-[16px] overflow-hidden mb-5 aspect-[4/3] bg-surface-container">
+<img alt="Post image" class="w-full h-full object-cover" data-alt="A beautifully styled, high-end reusable water bottle sitting on a clean, wooden table next to an open notebook and a healthy avocado toast. The lighting is bright and airy, with soft shadows. The overall composition is minimalist and editorial, utilizing a warm cream foundation with subtle teal and navy accents to reflect a sophisticated health-tech lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cbU-P4VYjWalpmL1L89hjsZFyz1vS9K2XdtNsnitROttXiMcHLCnJrsuwztuwraTz-6hMd9eY5fO_ULL3d3Zg4lQdEoEEP23Y7B0fX8TNP0256qcsbNxsEO0_o7zMVmsbv2Y_3Ao6ck_p1ZVBx2yYID2ZVv6M74Bs5KuXxvNn5CTNkkPN-AH4cZB2D6vcwWx3gMZFYQdeOkiznn6f2gcWBilGL5uCwQRznbmMG6QPchq9rXe5wRsgrlZ0RAGmaZWhuAYMgsXbsIR"/>
+</div>
+<div class="flex flex-wrap gap-2 mb-5">
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#nutrition</span>
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#hydratation</span>
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim/20 text-on-primary-container text-[12px] font-medium">#santé</span>
+</div>
+<div class="flex items-center justify-between border-t border-[#1A2238]/5 pt-4">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-[#ba1a1a] transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">favorite</span>
+<span class="font-label-bold text-[13px]">342</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">chat_bubble</span>
+<span class="font-label-bold text-[13px]">56</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+</div>
+<button class="text-primary-container group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white text-[#2EC4B6] font-sans text-[11px] font-bold uppercase tracking-wider docked full-width bottom-0 rounded-t-[32px] border-t border-[#1A2238]/5 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden">
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200 mb-1" style="font-variation-settings: 'FILL' 0;">psychology</span>
+<span>Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200 mb-1" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span>Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2EC4B6] text-white rounded-full px-5 py-2 scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span>Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200 mb-1" style="font-variation-settings: 'FILL' 0;">smart_toy</span>
+<span>IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-200 mb-1" style="font-variation-settings: 'FILL' 0;">person</span>
+<span>Profil</span>
+</a>
+</nav>
+</body></html>

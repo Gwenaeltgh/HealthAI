@@ -1,0 +1,23 @@
+# Performance / demo configuration
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.performance.yml up --build -d
+#
+# Goals:
+# - Services allégés: IA service disabled by default
+# - Monitoring simplifié: less moving parts
+# - Démo sur machine modeste: fewer containers, lower resource pressure
+
+services:
+  ia:
+    # IA is optional for the demo; keep it available behind an explicit profile.
+    profiles: ["full"]
+
+  api:
+    environment:
+      # Avoid calling IA in demo mode; API will return stub predictions.
+      HEALTHIA_DISABLE_IA: "1"
+
+  app:
+    environment:
+      # Use the frontend performance profile (React Query caching tuned).
+      VITE_APP_PROFILE: "performance"

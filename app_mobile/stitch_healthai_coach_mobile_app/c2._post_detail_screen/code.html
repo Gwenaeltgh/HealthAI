@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publication - HealthAI Coach</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#7b2f0a",
+                      "primary-fixed-dim": "#4fdbcc",
+                      "secondary-container": "#d7dffd",
+                      "surface-container-high": "#e3eae7",
+                      "on-secondary-container": "#5a627b",
+                      "on-tertiary-fixed": "#370e00",
+                      "on-secondary-fixed-variant": "#3e465e",
+                      "surface-container": "#e9efed",
+                      "outline": "#6c7a77",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#70f8e8",
+                      "on-tertiary-container": "#762b06",
+                      "tertiary-fixed-dim": "#ffb599",
+                      "inverse-primary": "#4fdbcc",
+                      "inverse-surface": "#2b3230",
+                      "error": "#ba1a1a",
+                      "surface": "#f4fbf8",
+                      "on-secondary-fixed": "#131b30",
+                      "primary": "#006a62",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ecf2f0",
+                      "outline-variant": "#bbcac6",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#2ec4b6",
+                      "secondary-fixed": "#dae2ff",
+                      "on-background": "#161d1c",
+                      "background": "#f4fbf8",
+                      "surface-container-highest": "#dde4e2",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#9a4520",
+                      "tertiary-fixed": "#ffdbce",
+                      "surface-variant": "#dde4e2",
+                      "surface-container-low": "#eff5f3",
+                      "on-surface-variant": "#3c4947",
+                      "secondary-fixed-dim": "#bec6e3",
+                      "surface-dim": "#d5dbd9",
+                      "on-primary-fixed-variant": "#005049",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#161d1c",
+                      "tertiary-container": "#ff9468",
+                      "surface-bright": "#f4fbf8",
+                      "secondary": "#565e77",
+                      "surface-tint": "#006a62",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#004c46",
+                      "on-primary-fixed": "#00201d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1rem",
+                      "3xl": "1.5rem"
+              },
+              "spacing": {
+                      "stack-gap": "16px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "section-gap": "40px",
+                      "container-padding": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter", "sans-serif"],
+                      "h1-editorial": ["Newsreader", "serif"],
+                      "body-md": ["Inter", "sans-serif"],
+                      "h2-editorial": ["Newsreader", "serif"],
+                      "display-metrics": ["Inter", "sans-serif"],
+                      "label-bold": ["Inter", "sans-serif"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "h1-editorial": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "h2-editorial": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                      "display-metrics": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Smooth scrolling and hide scrollbar for clean aesthetic */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center px-gutter py-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-on-surface group-hover:text-primary transition-colors">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center font-h2-editorial text-h2-editorial text-on-background tracking-tight pr-10">Publication</h1>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col w-full max-w-3xl mx-auto pb-[160px] md:pb-[80px]">
+<!-- Post Card -->
+<article class="bg-surface-container-lowest mt-4 mx-0 md:mx-gutter md:rounded-3xl border-t border-b md:border border-outline-variant/20 overflow-hidden shadow-[0_8px_30px_rgb(22,29,28,0.04)]">
+<!-- Author Info -->
+<div class="px-container-padding pt-container-padding flex items-center gap-4">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-outline-variant/30" data-alt="A softly lit, natural portrait of a young woman with a relaxed, positive expression. She is wearing a simple linen top against a warm cream background. The lighting highlights a healthy glow, fitting perfectly into an approachable, premium health-tech app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVI4EaA6Lq_HqdNeTsNrVA22yA3eNN4_fEyjO1hJBtbqen_xPIOO2BSBhWvbtpXpo7A27kGrLB4yRu4yIlNBwG3P7N1LOFVS2A5htvxk5C9YV6YE_4ihk86qWdV1Vtcf2ncUAhw4I74Gpx_sC2Tq7ncK68MTFMqF7hyVZRttzxGaYdEVgFW_aw4eelPA8ezDkjd0mmM5QM1v37jnOsvPyiIjU4gn156TZF1sKmm6xSGl9vNfqd6riTbBt5ExNtIbEGvblFu1x3gyD_"/>
+<div class="flex-1">
+<h2 class="font-label-bold text-label-bold text-on-background">Dr. Sophie Laurent</h2>
+<p class="font-body-md text-[13px] text-on-surface-variant">Nutritionniste • Il y a 2 heures</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="px-container-padding py-stack-gap">
+<p class="font-body-md text-body-md text-on-surface mb-stack-gap">
+                    Un petit rappel que la perfection n'existe pas dans l'alimentation ! Privilégiez l'équilibre à long terme plutôt que les restrictions extrêmes. Aujourd'hui, je me fais plaisir avec ce bol coloré, riche en antioxydants et en fibres. 🥑✨ Quelles sont vos astuces pour un déjeuner rapide et sain ?
+                </p>
+<div class="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-outline-variant/10">
+<img alt="Healthy lunch bowl" class="w-full h-full object-cover" data-alt="A vibrant, overhead shot of a healthy nourish bowl filled with colorful vegetables, sliced avocado, quinoa, and a sprinkle of seeds, set on a clean, light matte ceramic plate. The scene is brightly lit with natural, diffused light, evoking a fresh, energetic, and clean-eating lifestyle vibe aligned with modern wellness themes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyd6L9g87pcJLtM24tV4F8ip4SCMF7sD14i6H2cBlxYYXrB6f-ltv6fzdMF0m684Tr0WPd5GI6OaojlHvbSjx-61SZTAh2bMAvFphV1q4fpuVUnGJvV2dWOut_nWDP28ncmEyp97UQoLWKa1Qf-ca7kiKfmBaifK94KHOk2PXTHGIh5m8CEPDiagjL7VO0M6AGov4k4nW0X9xJ1S7MRhsjaX4JZI5hU3dQg1kC6CA6QWu3al_8TcN8nTQgGTHgzUIOwJkT4G1gijPE"/>
+</div>
+</div>
+<!-- Interaction Bar -->
+<div class="px-container-padding pb-container-padding flex items-center gap-6 border-t border-outline-variant/10 pt-4 mt-2">
+<button class="flex items-center gap-2 group text-on-surface-variant hover:text-[#ba1a1a] transition-colors">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-bold text-[14px]">245</span>
+</button>
+<button class="flex items-center gap-2 group text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">chat_bubble</span>
+<span class="font-label-bold text-[14px]">12</span>
+</button>
+<div class="flex-1"></div>
+<button class="flex items-center gap-2 group text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">share</span>
+</button>
+</div>
+</article>
+<!-- Comments Section -->
+<section class="px-gutter mt-section-gap">
+<h3 class="font-h2-editorial text-h2-editorial text-on-background mb-stack-gap">Commentaires (12)</h3>
+<div class="flex flex-col gap-6">
+<!-- Comment 1 -->
+<div class="flex gap-4">
+<img alt="Avatar Marc" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="A candid, warm portrait of a smiling young man in a casual navy sweater, against an out-of-focus bright background. The lighting is soft and flattering, creating an inviting and friendly presence suitable for a supportive community platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoY9tCDg3ymTWQ54euk6lGh-S__hlC4pTVUE_puQ6gDjQnVEaZyRyKgxGtRnj7Tllka2SQu9DjndwEczd833jNe8wiNfckmRsSfLFUXip9lcx9nJuw_yD_phkz9Hh3iFe098Ido2ibdfLE5prTSI5zOvzwLcHYbFhF8OeJ3mQh1G4frwq7JNJuBwa8LB1Bjv7PsZ9VqH6RB4xaZuHqGFFk25HhfamYwxS42UlRgOUsGzBaJqF2CEJcuwe1KXFYTauLqvi_Swm0YnZn"/>
+<div class="flex-1 bg-surface-container-low/50 rounded-2xl rounded-tl-none p-4 border border-outline-variant/20">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-bold text-label-bold text-on-background">Marc Dupont</span>
+<span class="font-body-md text-[12px] text-outline">1 h</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Totalement d'accord ! Personnellement, je prépare mes repas le dimanche soir pour gagner du temps la semaine. Ça sauve des vies ! 😅</p>
+<div class="flex items-center gap-4">
+<button class="font-label-bold text-[13px] text-primary-container hover:text-primary transition-colors">Répondre</button>
+<button class="flex items-center gap-1 text-outline hover:text-[#ba1a1a] transition-colors ml-auto group">
+<span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1; color: #ba1a1a;">favorite</span>
+<span class="font-label-bold text-[12px] text-on-surface-variant">4</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-[#ffb599] flex items-center justify-center flex-shrink-0 text-[#370e00] font-label-bold text-lg">
+                        E
+                    </div>
+<div class="flex-1 bg-surface-container-low/50 rounded-2xl rounded-tl-none p-4 border border-outline-variant/20">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-bold text-label-bold text-on-background">Elodie M.</span>
+<span class="font-body-md text-[12px] text-outline">45 min</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Ça a l'air délicieux ! Est-ce que tu pourrais partager la recette de la vinaigrette ? J'ai du mal à trouver des sauces saines et bonnes.</p>
+<div class="flex items-center gap-4">
+<button class="font-label-bold text-[13px] text-primary-container hover:text-primary transition-colors">Répondre</button>
+<button class="flex items-center gap-1 text-outline hover:text-[#ba1a1a] transition-colors ml-auto group">
+<span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Comment Input -->
+<!-- Fixed positioned above the BottomNavBar on mobile, directly at bottom on desktop -->
+<div class="fixed bottom-[88px] md:bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant/20 px-gutter py-3 z-40 shadow-[0_-8px_20px_rgba(22,29,28,0.03)]">
+<div class="max-w-3xl mx-auto flex items-center gap-3">
+<img alt="Votre Avatar" class="w-10 h-10 rounded-full object-cover flex-shrink-0 border border-outline-variant/30" data-alt="A clean, minimalist portrait of a confident young person with a neutral expression, set against a pristine white background. The studio lighting emphasizes clarity and openness, perfectly suited as the primary user avatar for a sleek lifestyle application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBLWBfLh7_Z3ywXbifGEMGSItRUvLY3m3gayvWjqfPTiVjbnouJKyo4Nc1ci2rYfzja4-PbcJvZuAFSHfFHwxPxDOFuIFWoecYO4CANvKVaDWyRUcPjWj0nON3kQNSKKYMDxCHOJ4HZsePNM3HeqgMhFypHWDEQvYM0puALdjIxOXetCaUszl46TH_rpN949yk3irXS568dYjiFBDqi1TjukYLwqHCpW2bipuoB81Wqbuj2n6ZHBH657NxqlThIh_--DxFFshEpctq"/>
+<div class="flex-1 relative">
+<input class="w-full bg-surface-container-low border border-transparent focus:border-primary-container/50 focus:bg-surface-container-lowest focus:ring-0 rounded-full pl-5 pr-12 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline transition-all" placeholder="Ajouter un commentaire..." type="text"/>
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-primary-container text-white hover:bg-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only) - Generated from JSON -->
+<nav class="md:hidden bg-white dark:bg-slate-900 border-t border-[#1A2238]/5 dark:border-white/5 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 rounded-t-[32px]">
+<!-- Coach -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform duration-200">psychology</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Coach</span>
+</button>
+<!-- Journal -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform duration-200">menu_book</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Journal</span>
+</button>
+<!-- Feed (ACTIVE) -->
+<button class="flex flex-col items-center justify-center bg-[#2EC4B6] text-white rounded-full px-5 py-2 group">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform duration-200">forum</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Feed</span>
+</button>
+<!-- IA -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform duration-200">smart_toy</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">IA</span>
+</button>
+<!-- Profil -->
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all group">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform duration-200">person</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider">Profil</span>
+</button>
+</nav>
+</body></html>

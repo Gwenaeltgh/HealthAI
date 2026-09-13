@@ -1,0 +1,24 @@
+services:
+  app-test:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./app:/app
+      - healthia-app-node-modules:/app/node_modules
+    command: sh -c "npm ci && npm test"
+
+  python-test:
+    image: python:3.11-slim
+    working_dir: /srv
+    volumes:
+      - ./:/srv
+    command: python -m unittest discover -s test/unit -p "test_*.py"
+
+  k6:
+    image: grafana/k6:0.49.0
+    volumes:
+      - ./test/load:/scripts:ro
+    entrypoint: ["k6"]
+
+volumes:
+  healthia-app-node-modules:

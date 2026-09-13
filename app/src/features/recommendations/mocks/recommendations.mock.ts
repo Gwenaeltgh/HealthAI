@@ -1,0 +1,42 @@
+export const mockRecommendations = [
+  {
+    id: '1',
+    userId: '101',
+    type: 'nutrition',
+    detail: 'Increase your protein intake to support muscle recovery.',
+    date: '2023-10-01',
+    confidenceLevel: 0.85,
+  },
+  {
+    id: '2',
+    userId: '102',
+    type: 'training',
+    detail: 'Incorporate more cardio exercises into your routine.',
+    date: '2023-10-02',
+    confidenceLevel: 0.90,
+  },
+  {
+    id: '3',
+    userId: '103',
+    type: 'health',
+    detail: 'Consider a daily meditation practice for stress management.',
+    date: '2023-10-03',
+    confidenceLevel: 0.80,
+  },
+  {
+    id: '4',
+    userId: '104',
+    type: 'recovery',
+    detail: 'Ensure you are getting enough sleep each night.',
+    date: '2023-10-04',
+    confidenceLevel: 0.75,
+  },
+  {
+    id: '5',
+    userId: '105',
+    type: 'nutrition',
+    detail: 'Stay hydrated by drinking at least 2 liters of water daily.',
+    date: '2023-10-05',
+    confidenceLevel: 0.88,
+  },
+];

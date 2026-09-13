@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Créons ton compte - HealthAI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "16px"
+                    },
+                    spacing: {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "h1-editorial": ["36px", { lineHeight: "44px", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "h2-editorial": ["28px", { lineHeight: "36px", fontWeight: "500" }],
+                        "display-metrics": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-bold": ["14px", { lineHeight: "20px", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header / TopAppBar Equivalent (Transactional - Back only) -->
+<header class="w-full px-6 py-4 flex items-center justify-start sticky top-0 bg-background/80 backdrop-blur-md z-10">
+<button aria-label="Retour" class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-md mx-auto px-container-padding pb-section-gap flex flex-col">
+<!-- Header Text -->
+<div class="mb-section-gap mt-4">
+<h1 class="font-h1-editorial text-h1-editorial text-on-surface mb-2">Créons ton compte</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Rejoins L'Avocat pour un accompagnement sur-mesure.</p>
+</div>
+<!-- Form Elements -->
+<form class="flex flex-col gap-stack-gap mb-section-gap">
+<!-- Nom complet Input -->
+<div class="relative group">
+<input class="peer w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-card px-4 pt-6 pb-2 border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all shadow-sm" id="fullname" name="fullname" placeholder=" " required="" type="text"/>
+<label class="absolute left-4 top-4 text-on-surface-variant font-body-md text-body-md transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-1.5 peer-focus:text-[12px] peer-focus:text-primary-container peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[12px]" for="fullname">Nom complet</label>
+</div>
+<!-- Email Input -->
+<div class="relative group">
+<input class="peer w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-card px-4 pt-6 pb-2 border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all shadow-sm" id="email" name="email" placeholder=" " required="" type="email"/>
+<label class="absolute left-4 top-4 text-on-surface-variant font-body-md text-body-md transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-1.5 peer-focus:text-[12px] peer-focus:text-primary-container peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[12px]" for="email">Email</label>
+</div>
+<!-- Mot de passe Input -->
+<div class="relative group">
+<input class="peer w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-card px-4 pt-6 pb-2 pr-12 border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all shadow-sm" id="password" name="password" placeholder=" " required="" type="password"/>
+<label class="absolute left-4 top-4 text-on-surface-variant font-body-md text-body-md transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-1.5 peer-focus:text-[12px] peer-focus:text-primary-container peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[12px]" for="password">Mot de passe</label>
+<button aria-label="Afficher le mot de passe" class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary-container transition-colors p-1" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+<!-- Confirmer mot de passe Input -->
+<div class="relative group">
+<input class="peer w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-card px-4 pt-6 pb-2 pr-12 border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all shadow-sm" id="confirm_password" name="confirm_password" placeholder=" " required="" type="password"/>
+<label class="absolute left-4 top-4 text-on-surface-variant font-body-md text-body-md transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-1.5 peer-focus:text-[12px] peer-focus:text-primary-container peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[12px]" for="confirm_password">Confirmer le mot de passe</label>
+<button aria-label="Afficher le mot de passe" class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary-container transition-colors p-1" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+<!-- CGU Checkbox -->
+<div class="flex items-start gap-3 mt-2">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 border-outline-variant rounded bg-surface-container-lowest text-primary-container focus:ring-primary-container cursor-pointer transition-colors" id="terms" name="terms" required="" type="checkbox"/>
+</div>
+<div class="text-sm">
+<label class="font-body-md text-body-md text-on-surface-variant text-[13px] leading-tight cursor-pointer" for="terms">
+                        J'accepte les <a class="text-primary hover:underline" href="#">CGU</a> et la <a class="text-primary hover:underline" href="#">politique de confidentialité (RGPD)</a>.
+                    </label>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="mt-4 w-full bg-[#1A2238] hover:bg-[#1A2238]/90 text-white font-label-bold text-label-bold rounded-full py-4 transition-all shadow-sm active:scale-[0.98]" type="submit">
+                Continuer
+            </button>
+</form>
+<!-- Social Login Section -->
+<div class="mt-auto flex flex-col gap-stack-gap">
+<div class="flex items-center gap-4 w-full mb-2">
+<div class="h-px bg-outline-variant/50 flex-1"></div>
+<span class="font-body-md text-[13px] text-on-surface-variant">Ou continue avec</span>
+<div class="h-px bg-outline-variant/50 flex-1"></div>
+</div>
+<!-- Google Button -->
+<button class="w-full bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface font-label-bold text-label-bold rounded-full py-3.5 flex items-center justify-center gap-3 transition-colors" type="button">
+<img alt="Google Logo" class="w-5 h-5" data-alt="A clean, flat, 2D vector graphic of the official Google 'G' logo on a transparent background, suitable for a UI button. The style is minimalist and modern, avoiding any 3D effects or shadows. High contrast colors to fit a light-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDorj669f53bJsZ2ePAUt8yRjCFapAhxu9DfFwMo-GSxPTseJz7uAnlH38RnwjhKqLoXsxWVBE6PBIxYWlnJxj3liMoLoCmF2lg4kCCoom5fC7XZhQ6m2Epeq62i8XnyTJO9N7kApleM2TrLEbVlyYmJ0cKH2Ia5HYWeUtc8VuRYmSqybIYo2ENqkkPOu5o7UVhgNY1j96INyLS-KySHkpxD2wbzY_58iaTaoobcY5EMS8fvAByzvP6roASAd8y8LofPHROWa0vB6mg"/>
+                Google
+            </button>
+<!-- Apple Button -->
+<button class="w-full bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface font-label-bold text-label-bold rounded-full py-3.5 flex items-center justify-center gap-3 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">ios</span>
+                Apple
+            </button>
+</div>
+</main>
+</body></html>

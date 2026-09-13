@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paramètres - HealthAI Coach</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "h1-editorial": ["Newsreader", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "h2-editorial": ["Newsreader", "serif"],
+                        "display-metrics": ["Inter", "sans-serif"],
+                        "label-bold": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Base styles for material symbols to ensure correct rendering */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background-color: rgba(22, 29, 28, 0.1); border-radius: 10px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
+<!-- iOS Status Bar Simulation -->
+<div class="w-full h-12 flex justify-between items-center px-6 pt-2 text-[15px] font-semibold tracking-tight z-50 bg-background/90 backdrop-blur-md sticky top-0">
+<div>09:05</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">wifi</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+</div>
+</div>
+<!-- Header (Task-Focused Page: Adapted from TopAppBar) -->
+<header class="w-full px-6 py-4 flex items-center justify-between sticky top-12 bg-background/90 backdrop-blur-md z-40">
+<button aria-label="Retour" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors group cursor-pointer">
+<span class="material-symbols-outlined text-on-background group-hover:text-primary-container transition-colors">arrow_back</span>
+</button>
+<h1 class="font-h2-editorial text-h2-editorial text-on-background absolute left-1/2 -translate-x-1/2">Paramètres</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for perfect centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto px-container-padding py-stack-gap pb-[100px] flex flex-col gap-section-gap">
+<!-- Section: Compte -->
+<section class="flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider pl-4">Compte</h2>
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] border border-outline-variant/30 flex flex-col">
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-on-surface">Modifier mon profil</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-on-surface">Objectifs et santé</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section: Préférences -->
+<section class="flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider pl-4">Préférences</h2>
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] border border-outline-variant/30 flex flex-col">
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">straighten</span>
+<span class="font-body-md text-on-surface">Unités</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-sm">Métriques (kg, cm)</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</div>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">language</span>
+<span class="font-body-md text-on-surface">Langue</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-sm">Français</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</div>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">dark_mode</span>
+<span class="font-body-md text-on-surface">Thème</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-sm">Clair</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Section: Connexions -->
+<section class="flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider pl-4">Connexions</h2>
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] border border-outline-variant/30 flex flex-col">
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">monitor_heart</span>
+<span class="font-body-md text-on-surface">Apple Santé</span>
+</div>
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">fitbit</span>
+<span class="font-body-md text-on-surface">Google Fit</span>
+</div>
+<span class="text-sm text-on-surface-variant group-hover:text-primary-container transition-colors">Connecter</span>
+</button>
+</div>
+</section>
+<!-- Section: Confidentialité -->
+<section class="flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider pl-4">Confidentialité</h2>
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] border border-outline-variant/30 flex flex-col">
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-on-surface">RGPD &amp; Données</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-red-50/50 transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-[#FF6B6B]">Supprimer mon compte</span>
+<span class="material-symbols-outlined text-[#FF6B6B]">person_remove</span>
+</button>
+</div>
+</section>
+<!-- Section: Application -->
+<section class="flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider pl-4">Application</h2>
+<div class="bg-surface-container-lowest rounded-[16px] overflow-hidden shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] border border-outline-variant/30 flex flex-col">
+<div class="flex items-center justify-between w-full p-4 border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-on-surface">Version</span>
+<span class="text-sm text-on-surface-variant">v2.4.1</span>
+</div>
+<button class="flex items-center justify-between w-full p-4 hover:bg-surface-container-low transition-colors text-left group border-b border-outline-variant/20 last:border-0">
+<span class="font-body-md text-on-surface">Conditions générales</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors">open_in_new</span>
+</button>
+</div>
+</section>
+<!-- Global Action: Logout -->
+<div class="mt-8 mb-12 px-4">
+<button class="w-full py-4 bg-surface-container-lowest border border-[#FF6B6B]/20 rounded-full flex items-center justify-center gap-2 hover:bg-[#FF6B6B]/5 transition-colors active:scale-[0.98] duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[#FF6B6B]">logout</span>
+<span class="font-label-bold text-label-bold text-[#FF6B6B] uppercase tracking-wide">Se déconnecter</span>
+</button>
+</div>
+</main>
+</body></html>

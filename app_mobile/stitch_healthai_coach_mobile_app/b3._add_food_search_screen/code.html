@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthAI Coach - Ajouter un aliment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FFFCF7] text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-white">
+<!-- Header (Transactional - No Global Nav Shells) -->
+<header class="flex justify-between items-center w-full px-6 py-4 bg-[#FFFCF7] sticky top-0 z-50">
+<button class="text-on-surface-variant font-label-bold text-label-bold hover:text-primary transition-colors">
+            Annuler
+        </button>
+<h1 class="font-h2-editorial text-h2-editorial text-on-surface">Ajouter un aliment</h1>
+<button class="text-on-surface hover:text-primary transition-colors flex items-center justify-center h-10 w-10 rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">tune</span>
+</button>
+</header>
+<main class="flex-1 w-full max-w-2xl mx-auto px-container-padding pb-section-gap flex flex-col gap-stack-gap">
+<!-- Search Bar -->
+<div class="relative mt-base">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest border border-[#1A2238]/10 rounded-full py-3 pl-12 pr-4 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-[0_2px_10px_0_rgba(26,34,56,0.02)] placeholder:text-on-surface-variant/60" placeholder="Rechercher un aliment..." type="text"/>
+</div>
+<!-- Horizontal Filter Chips -->
+<div class="flex overflow-x-auto no-scrollbar gap-base py-2 -mx-container-padding px-container-padding">
+<button class="shrink-0 bg-primary-container text-white px-5 py-2 rounded-full font-label-bold text-label-bold shadow-sm">
+                Récents
+            </button>
+<button class="shrink-0 bg-surface-container-lowest border border-[#1A2238]/10 text-on-surface px-5 py-2 rounded-full font-label-bold text-label-bold hover:bg-surface-container-low transition-colors">
+                Favoris
+            </button>
+<button class="shrink-0 bg-surface-container-lowest border border-[#1A2238]/10 text-on-surface px-5 py-2 rounded-full font-label-bold text-label-bold hover:bg-surface-container-low transition-colors">
+                Mes repas
+            </button>
+<button class="shrink-0 bg-surface-container-lowest border border-[#1A2238]/10 text-on-surface px-4 py-2 rounded-full font-label-bold text-label-bold hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+                Code-barres
+            </button>
+</div>
+<!-- Suggestions List -->
+<section class="mt-gutter flex flex-col gap-base">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-2">Suggestions</h2>
+<!-- Food Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-4 border border-[#1A2238]/5 shadow-[0_2px_8px_0_rgba(26,34,56,0.02)] hover:border-primary/20 transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Avocat" class="w-full h-full object-cover" data-alt="A macro studio shot of half a ripe, fresh avocado with the pit intact. The lighting is soft and natural, emphasizing the creamy green texture of the fruit against a minimalist, light cream background. The mood is fresh, healthy, and perfectly aligns with a modern wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsj8fTziDaDB41hvQh6poKBs_sKkJMNaeMmUUDfAtoUJP8JlXJpUSB_aexob12amMwOFo_RuboE0gclx7Dr5WNTFQLQa02EIGj3ifND1gVkROd_Px45hPPk72fF65YQFkshBqzg6eT2n44s1MiW4STx2ig95U_OlnnaDwaTfCjxZy5Hl6FgZbIOgrUTizSj9cW1PJmzjjY1pvN-9UANCOAxUsBtmf8jPny3nNKXNo7VDTI5yUN9ki_1VCX7MkrmC6tBm1gcNpODc9Z"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Avocat (frais)</h3>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Générique</p>
+<p class="font-body-md text-[12px] text-primary font-medium mt-0.5">160 kcal / 100g</p>
+</div>
+<button class="shrink-0 w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-4 border border-[#1A2238]/5 shadow-[0_2px_8px_0_rgba(26,34,56,0.02)] hover:border-primary/20 transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Cake" class="w-full h-full object-cover" data-alt="A slice of artisanal whole-grain bread on a clean white surface. Soft, high-key lighting casts gentle shadows, highlighting the textured crust and wholesome crumb of the bread. The aesthetic is warm, minimalist, and editorial, suitable for a premium health tracking application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAfiN3qe00xJGeIARxzvks4QEzsdni4O3bYSfEUenLmSFSL3DW7BGqvl4OKFmJDXOhEPFLGcndJ18B-x6qZ9YjG__85RjjRVNuiozdfBT6cvyc6JSw0InUAmHjIXBxVY3bfPyCFWng7IjwpXPo9fo8FElG4V0382DQYAZ8YxuNclwkTwsj6ESNiwFgny9e0x6MhOuigSFhCiQr65EQWDngDfDgTsqEQtoUUx_mYA0QHsaPSwzbmUDtKFMuQGcTPz4oRnI33tfwc5Q5"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Pain Complet</h3>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Boulangerie Tradition</p>
+<p class="font-body-md text-[12px] text-primary font-medium mt-0.5">247 kcal / 100g</p>
+</div>
+<button class="shrink-0 w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-4 border border-[#1A2238]/5 shadow-[0_2px_8px_0_rgba(26,34,56,0.02)] hover:border-primary/20 transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Oeuf" class="w-full h-full object-cover" data-alt="Two perfectly boiled eggs sliced in half on a minimal ceramic plate. The yolk is vibrant and slightly soft. The setting is bright and clean with a light cream backdrop and subtle teal accents in the styling. The overall feel is clinical precision mixed with lifestyle wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Yi2G1jVfNMPg1DJx2XcwKzpI542paOqg3SqKlsH2hGhkITDCw2jbrIY_exm4bZjR0zwZTnhRtW_GwBLeZSwvIo_xfyWJQAgz_fchL-C8TSrJ677iBNQVYxlkaeaq1I2LFc1aNika_9w9l6ISATSx16DKWaHwGs4IMpxXypBOwx6wlqPihBwxsfNf3_rWG-Y6UuvCuHcWiS6pqPHaCn6r7bRc8siIqZRabw-OvATTD2plEwC-4aDpO1GH3I4xCZu6BcwdAmFrfVHd"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Œuf dur</h3>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Générique</p>
+<p class="font-body-md text-[12px] text-primary font-medium mt-0.5">155 kcal / 100g</p>
+</div>
+<button class="shrink-0 w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-4 border border-[#1A2238]/5 shadow-[0_2px_8px_0_rgba(26,34,56,0.02)] hover:border-primary/20 transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Saumon" class="w-full h-full object-cover" data-alt="A fresh fillet of raw salmon resting on a minimalist slate board. The lighting is crisp and studio-quality, emphasizing the rich pink color and fat marbling of the fish. The background is a soft, warm cream tone. The image conveys high-quality nutrition and modern culinary simplicity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNiOZKvCNc12y4j79QwraHWJftUSPlh3GlkahWzj6amee4GNC-5V_WC2rQNPXB4Jc57oA22FyKoQpbN7HUWPhDl32Bq1jYY4jCUMAnO_njFVK6FdWp6PN-PpmZFTKNCf1_FPHPqObO_fr3-c5TqmZPlfFYYHcM5wPF8HmYvEZrxRt220nQmQOrYOfyNu6dLXQUkoc4GuS86gvUgXoi1eVj2VA8KIpNJqLBB26VU-ytqlOCKgDUW6c2yfjIntrdALWXlcbKjFHKuMRA"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Pavé de Saumon</h3>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Poissonnerie</p>
+<p class="font-body-md text-[12px] text-primary font-medium mt-0.5">208 kcal / 100g</p>
+</div>
+<button class="shrink-0 w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</section>
+</main>
+</body></html>

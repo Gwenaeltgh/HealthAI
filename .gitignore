@@ -1,0 +1,79 @@
+
+# =============================================================================
+# Next.js / Docker
+# =============================================================================
+node_modules
+.next
+out
+Thumbs.db
+.env
+.env.local
+*.log
+docker/mysql-data/
+mysql_data/*
+
+# =============================================================================
+# Kaggle Dataset Downloader
+# =============================================================================
+
+# Environment & secrets (NEVER commit these!)
+kaggle.json
+.env
+cookies.txt
+# Downloaded data (large files)
+data/kaggle/*
+*.zip
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+*.csv
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+
+# Local files in scraping module
+scraping/.env
+scraping/tmp_data_test/
+
+# Local temp
+tmp/
+
+# Local smoke tests
+_tmp_ia_test.py
+
+# Git
+repo-mirror.git

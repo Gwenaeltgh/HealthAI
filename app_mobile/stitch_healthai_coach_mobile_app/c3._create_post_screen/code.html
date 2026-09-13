@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nouvelle publication - HealthAI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for horizontal media list */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-background selection:bg-primary-container/30">
+<!-- Transactional Header -->
+<header class="flex justify-between items-center w-full px-6 py-4 border-b border-outline-variant/20 bg-background sticky top-0 z-10">
+<button class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-colors">
+            Annuler
+        </button>
+<h1 class="font-label-bold text-label-bold text-on-surface">
+            Nouvelle publication
+        </h1>
+<button class="font-label-bold text-label-bold bg-primary-container text-on-primary-container px-4 py-2 rounded-full hover:bg-primary-container/90 transition-colors shadow-sm">
+            Publier
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col max-w-2xl mx-auto w-full relative">
+<!-- User Context -->
+<div class="px-container-padding pt-6 flex items-center gap-stack-gap">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/30 flex-shrink-0">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A bright, professional yet approachable avatar portrait of a young French millennial man looking optimistic. The lighting is soft and natural, emphasizing a healthy lifestyle within a minimalist, light-mode aesthetic characterized by warm cream tones and subtle navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVLYs19PbOskQ0Dgb2Pw-rmQNzabcZu8umMtT4hocId6mSxF1kXpD2Ivyh2ZfkHN8fVN-gjqEfomsdtnhj8hezO7m5EnJ5orjfaZOns2qz67VCJjvfhTxu3U4cbCw1pmGfJNPKLmYrysliEzdOSzM1M5g9n2BAqvNMm2CJBv_QD4XVr4xOlSsakxz8WHZV0uQGaw0guGsHBxVRakrZsZ0jM6jvZT_z876o5YVc21N1o33nzvJtzo30VcQlj51nLc2ARabbhByzkTsK"/>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-on-surface">Thomas</div>
+<div class="font-body-md text-[13px] text-on-surface-variant">Public</div>
+</div>
+</div>
+<!-- Text Input -->
+<div class="px-container-padding pt-stack-gap flex-grow flex flex-col">
+<textarea class="w-full h-full min-h-[160px] bg-transparent border-none focus:ring-0 p-0 font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/60 resize-none" placeholder="Quoi de neuf dans ta journée santé ?"></textarea>
+<!-- Media Preview Row -->
+<div class="flex gap-base overflow-x-auto no-scrollbar py-4 mt-auto">
+<!-- Photo 1 -->
+<div class="relative flex-shrink-0 w-40 h-56 rounded-xl overflow-hidden shadow-sm border border-outline-variant/20 group">
+<img alt="Meal photo" class="w-full h-full object-cover" data-alt="A vibrant, top-down view of a healthy avocado toast with poached eggs on a rustic ceramic plate. The scene is lit by natural morning sunlight streaming through a window, set against a clean, light-cream table surface, embodying a modern wellness lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6C8hl1aFXfaMYkDuSfJQBLZHW2X30BWgkP9QRpm6fad70_cNX9tTG4EWOKxEU_kkGV2vd68ecqyuN_JacObzCzeJNXPFQ8A_5fCgWxNA2-zGqeXFlVW5X-d70c3lFzwfwoXtUEVGAvv6y1VJJO8Czhk2ENbB2xvQJrvYjxSUsMY2A35nqlXHu49F_bJQNxNfULM6d-NGtcuj0xkxpD8wuoufkD-lWdP2V01MJh0BqfeEwIWdX_AUSGzH9sUTqZEoMs5tOSsLRzQ_o"/>
+<button class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Photo 2 -->
+<div class="relative flex-shrink-0 w-40 h-56 rounded-xl overflow-hidden shadow-sm border border-outline-variant/20 group">
+<img alt="Workout photo" class="w-full h-full object-cover" data-alt="A stylish, low-angle shot of a pair of modern running shoes on a scenic outdoor trail. The lighting is golden hour warm, creating long shadows and highlighting the texture of the path. The overall mood is energetic and aligned with a premium, minimalist health and fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDub0wxKB-8FJI0IwN6kB2X8lz0AdX7FzaDXReNqX4WfvgVePcCsh4OiUmuT5lPFQBi1xcJef6vfoFjF_t9KNQbiqVfPgr0eKrt5H4DT91V6kTyM8kRD_mUsO02P868aWX4AzIeLoYpST60jWFwPZuBsyUHnbxU2Rua5f8zlKxZS_ePBYNHkqNUwMs7K4BM9OmG9a1BtPkAWPTWJgbusHRQGBfoAunSHfy19xuU_T2-WemehxatWToIDs5ulyyjwjP8-rX97quS9k8a"/>
+<button class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Toolbar -->
+<div class="w-full bg-surface border-t border-outline-variant/20 px-container-padding py-4 sticky bottom-0 z-20">
+<div class="max-w-2xl mx-auto flex items-center gap-stack-gap">
+<button aria-label="Camera" class="text-primary-container hover:bg-primary-container/10 p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</button>
+<button aria-label="Gallery" class="text-primary-container hover:bg-primary-container/10 p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">image</span>
+</button>
+<button aria-label="Hashtag" class="text-primary-container hover:bg-primary-container/10 p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">tag</span>
+</button>
+<button aria-label="Mood" class="text-primary-container hover:bg-primary-container/10 p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mood</span>
+</button>
+</div>
+</div>
+</body></html>

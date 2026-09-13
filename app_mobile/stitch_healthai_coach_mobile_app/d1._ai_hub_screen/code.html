@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ton coach IA - HealthAI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "h1-editorial": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h2-editorial": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                        "display-metrics": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-[#FFFCF7] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4 docked full-width top-0 border-b border-[#1A2238]/10 dark:border-white/10 flat no shadows sticky z-40 hidden md:flex">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden flex items-center justify-center">
+<img alt="L'Avocat mascot" class="w-full h-full object-cover" data-alt="A 2D flat illustration of a cheerful avocado mascot, suitable for a health app avatar. The style is minimalist and friendly, using a vibrant yet soft color palette of green and cream. It should feel approachable and modern, fitting a 'Le Coach Bienveillant' persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9k60FHT5jCksLacFlGyFvVyxOFdKzjsDKV7s4T1TPycdTFx9Fjnph81JL1tHZCLJe9zDzl9XTK-cyAicrKHMWJfavcbZ3vhlQFzKq8BiAEsM6F4XViBvDKekWqif-0DDbgYPMAQ3PPdbr45Ul2mSXJyLSxb0fQDruuPK6odEqe1paAGIXs8UL9QeVqBKODcSvB__ciADFjnGNdnzBM8kIMk7SYkE-TZslfLFV-CZNlgoAEMkw7uiCf_F6Fqp55UbN0clZyYWVV_N"/>
+</div>
+<span class="font-serif text-lg font-bold text-[#1A2238] dark:text-white">HealthAI Coach</span>
+</div>
+<nav class="flex gap-6">
+<a class="text-[#1A2238]/60 dark:text-white/60 hover:bg-[#2EC4B6]/10 transition-colors px-3 py-2 rounded-md font-label-bold text-label-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span> Coach
+            </a>
+<a class="text-[#1A2238]/60 dark:text-white/60 hover:bg-[#2EC4B6]/10 transition-colors px-3 py-2 rounded-md font-label-bold text-label-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span> Journal
+            </a>
+<a class="text-[#1A2238]/60 dark:text-white/60 hover:bg-[#2EC4B6]/10 transition-colors px-3 py-2 rounded-md font-label-bold text-label-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span> Feed
+            </a>
+<a class="text-[#2EC4B6] font-bold hover:bg-[#2EC4B6]/10 transition-colors px-3 py-2 rounded-md font-label-bold text-label-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span> IA
+            </a>
+<a class="text-[#1A2238]/60 dark:text-white/60 hover:bg-[#2EC4B6]/10 transition-colors px-3 py-2 rounded-md font-label-bold text-label-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> Profil
+            </a>
+</nav>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors scale-95 active:duration-150">
+<span class="material-symbols-outlined text-[#2EC4B6] dark:text-[#2EC4B6]" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Mobile Header -->
+<header class="md:hidden flex justify-between items-center w-full px-6 py-4 bg-background sticky top-0 z-40">
+<h1 class="font-h1-editorial text-h1-editorial flex items-center gap-2">
+            Ton coach IA <span class="material-symbols-outlined text-primary-container" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</h1>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10 space-y-section-gap">
+<!-- Desktop Header Title -->
+<div class="hidden md:block">
+<h1 class="font-h1-editorial text-h1-editorial flex items-center gap-3">
+                Ton coach IA <span class="material-symbols-outlined text-primary-container text-4xl" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</h1>
+</div>
+<!-- Hero Card -->
+<section class="bg-gradient-to-br from-primary-container to-primary rounded-xl p-container-padding flex flex-col md:flex-row items-center gap-6 relative overflow-hidden text-on-primary shadow-sm">
+<!-- Decorative circle -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 relative z-10">
+<img alt="Avocado Mascot with clipboard" class="w-full h-full object-contain drop-shadow-md" data-alt="A flat 2D illustration of a cute avocado character acting as a health coach. The avocado is holding a small clipboard and wearing a subtle stethoscope. The style is modern, humanist, and clean, fitting a light-mode app with teal and soft cream colors. It should look friendly and intelligent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC12RbftA_14RGCHKHpIRukfUIpuYa1oRLV_oDp0gwQ7eKtB-dm4GzhK6vSjVCY7xGk8v_tRf3_raHdaBIUpw7iNKTqSHnzCJDPfEKPbofK0ntR-_oM0dgwUgQeaeNrJqWJMpIh75ZFHB07ZEe-Psc4lP0pO5lulQVo8lCv2781TAPQ3E0obRCps3ArtFWLNTQS2i0R10TS7pj473ZBpmEIrpVLc8E-yE1MPw9oNZHjkFRZVlorvcmDlMCWu2pdXAfpGBLzL_M3dzBA"/>
+</div>
+<div class="relative z-10 text-center md:text-left space-y-4">
+<h2 class="font-h2-editorial text-h2-editorial text-white">Bonjour Orias 👋<br/>Voici tes recos du jour</h2>
+<p class="font-body-md text-body-md text-white/90 max-w-lg">J'ai analysé tes données de sommeil et d'activité. Voici ce que je te conseille pour optimiser ton énergie aujourd'hui.</p>
+</div>
+</section>
+<!-- Recommandations Section -->
+<section class="space-y-stack-gap">
+<h3 class="font-h2-editorial text-h2-editorial text-on-surface">Recommandations</h3>
+<div class="flex overflow-x-auto gap-4 pb-4 hide-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<!-- Card 1: REPAS -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-container-lowest rounded-xl p-container-padding flex flex-col gap-4 border border-outline-variant/30 shrink-0">
+<div class="flex items-center justify-between">
+<span class="bg-primary-container/10 text-primary-container px-3 py-1 rounded-full font-label-bold text-[12px] uppercase tracking-wider">Repas</span>
+<span class="material-symbols-outlined text-outline" data-icon="restaurant">restaurant</span>
+</div>
+<h4 class="font-h2-editorial text-[22px] leading-tight text-on-surface">Salade Énergisante</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Riche en fer et vitamines pour contrer ta légère fatigue matinale.</p>
+<button class="text-primary-container font-label-bold text-label-bold flex items-center gap-1 self-start hover:text-primary transition-colors mt-2">
+                        Voir la recette <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: SPORT -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-container-lowest rounded-xl p-container-padding flex flex-col gap-4 border border-outline-variant/30 shrink-0">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-bold text-[12px] uppercase tracking-wider">Sport</span>
+<span class="material-symbols-outlined text-outline" data-icon="directions_run">directions_run</span>
+</div>
+<h4 class="font-h2-editorial text-[22px] leading-tight text-on-surface">Marche Active 20 min</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Idéal pour atteindre ton objectif de pas sans forcer après l'entraînement d'hier.</p>
+<button class="text-primary-container font-label-bold text-label-bold flex items-center gap-1 self-start hover:text-primary transition-colors mt-2">
+                        Lancer l'activité <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3: BIEN-ÊTRE -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-container-lowest rounded-xl p-container-padding flex flex-col gap-4 border border-outline-variant/30 shrink-0">
+<div class="flex items-center justify-between">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-bold text-[12px] uppercase tracking-wider">Bien-être</span>
+<span class="material-symbols-outlined text-outline" data-icon="self_improvement">self_improvement</span>
+</div>
+<h4 class="font-h2-editorial text-[22px] leading-tight text-on-surface">Cohérence Cardiaque</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">5 minutes pour réduire le stress détecté dans ton rythme hier soir.</p>
+<button class="text-primary-container font-label-bold text-label-bold flex items-center gap-1 self-start hover:text-primary transition-colors mt-2">
+                        Commencer <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Chatbot Entry Card -->
+<section class="bg-surface-container-low rounded-xl p-container-padding flex flex-col items-center text-center gap-6 border border-outline-variant/50 max-w-2xl mx-auto mt-8">
+<div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center -mt-10 mb-2">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="smart_toy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-h2-editorial text-h2-editorial text-on-surface">Pose-moi tes questions santé</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Je suis là pour t'accompagner au quotidien. Nutrition, sommeil, exercices... demande-moi tout !</p>
+</div>
+<button class="w-full md:w-auto px-8 py-3 bg-primary-container text-white rounded-full font-label-bold text-label-bold hover:bg-primary transition-colors shadow-sm flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" data-icon="chat">chat</span> Démarrer la conversation
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 border-t border-[#1A2238]/5 dark:border-white/5 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)] docked full-width bottom-0 rounded-t-[32px]">
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider mt-1">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider mt-1">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2EC4B6] text-white rounded-full px-5 py-2 Active: scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider mt-1">IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[11px] font-bold uppercase tracking-wider mt-1">Profil</span>
+</a>
+</nav>
+</body></html>

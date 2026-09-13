@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthAI Coach - Détail Recommandation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased pb-32">
+<!-- Header Overlay -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding py-4 bg-gradient-to-b from-on-surface/60 to-transparent text-white">
+<button aria-label="Retour" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/20 backdrop-blur-md transition-colors hover:bg-surface-container-lowest/40">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex gap-base">
+<button aria-label="Partager" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/20 backdrop-blur-md transition-colors hover:bg-surface-container-lowest/40">
+<span class="material-symbols-outlined" data-icon="ios_share">ios_share</span>
+</button>
+<button aria-label="Sauvegarder" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/20 backdrop-blur-md transition-colors hover:bg-surface-container-lowest/40">
+<span class="material-symbols-outlined" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</header>
+<!-- Hero Image -->
+<div class="w-full h-[397px] min-h-[350px] bg-cover bg-center relative" data-alt="A top-down, high-quality editorial food photograph of a vibrant, healthy quinoa and grilled chicken bowl. The bowl is beautifully composed with colorful fresh vegetables like avocado, cherry tomatoes, and spinach, resting on a soft cream, textured organic surface. The lighting is bright, natural, and soft, enhancing the fresh colors of the ingredients and reflecting a modern, humanist-data wellness aesthetic. The composition feels appetizing, clean, and perfectly suited for a premium health app." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDS1uCPos56ETOIZkWdgva3YMDKXehHOjHvQsFN2PrVF1woD7D8b6TQCB_ZcwDzapgx_0fiWVpUpDjqKRkv-0lrDnzLE77AZjQQUI-Qg_02pSAYzB9MxnZLRwmWSiOMHE7Umk-IKkjf6O_Up1mwuwsY0PmVDXERLW7StC8HUAdMzfrqrVApGuP5Wz4nZLYzlWNDXuAWwphD-aWFYVUkBGtL9GKjmNtL5Lx9LL0r3tDWqbaUII69L2S3q6jzB8vu5xSpzkvH4Pkm8PPy');">
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 -mt-10 bg-background rounded-t-[32px] pt-8 px-container-padding pb-section-gap flex flex-col gap-section-gap shadow-[0_-10px_30px_0_rgba(22,29,28,0.05)]">
+<!-- Header Info -->
+<section class="flex flex-col gap-base">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase tracking-wider text-[11px]">
+                    Repas suggéré
+                </span>
+</div>
+<h1 class="font-h2-editorial text-h2-editorial text-on-surface">
+                Bowl protéiné quinoa-poulet
+            </h1>
+<div class="flex flex-wrap items-center gap-4 mt-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant bg-surface-container-highest px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_fire_department">local_fire_department</span>
+<span class="font-label-bold text-label-bold text-[13px]">450 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant bg-surface-container-highest px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+<span class="font-label-bold text-label-bold text-[13px]">15 min</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant bg-surface-container-highest px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px]" data-icon="speed">speed</span>
+<span class="font-label-bold text-label-bold text-[13px]">Facile</span>
+</div>
+</div>
+</section>
+<!-- Pourquoi cette reco? -->
+<section class="bg-surface-container-low border border-outline-variant rounded-2xl p-6 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" data-icon="psychology">psychology</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-label-bold text-label-bold text-on-surface text-lg">Pourquoi cette reco ?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Ce repas correspond parfaitement à votre objectif de prise de masse musculaire tout en respectant votre besoin de récupération après votre séance de cardio d'hier. Le quinoa offre une excellente source de glucides complexes.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Ingrédients -->
+<section class="flex flex-col gap-stack-gap">
+<div class="flex justify-between items-end">
+<h2 class="font-h2-editorial text-h2-editorial text-on-surface text-[24px]">Ingrédients</h2>
+<span class="font-label-bold text-label-bold text-on-surface-variant text-sm">1 portion</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Item -->
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-container/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 rounded-md border-outline text-primary-container focus:ring-primary-container focus:ring-offset-background bg-transparent transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface flex-1">Blanc de poulet grillé</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant">150g</span>
+</label>
+<!-- Item -->
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-container/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 rounded-md border-outline text-primary-container focus:ring-primary-container focus:ring-offset-background bg-transparent transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface flex-1">Quinoa cuit</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant">100g</span>
+</label>
+<!-- Item -->
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-container/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 rounded-md border-outline text-primary-container focus:ring-primary-container focus:ring-offset-background bg-transparent transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface flex-1">Avocat (demi)</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant">1 pce</span>
+</label>
+<!-- Item -->
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant hover:border-primary-container/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 rounded-md border-outline text-primary-container focus:ring-primary-container focus:ring-offset-background bg-transparent transition-all" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface flex-1">Tomates cerises</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant">50g</span>
+</label>
+</div>
+</section>
+<!-- Préparation -->
+<section class="flex flex-col gap-stack-gap">
+<h2 class="font-h2-editorial text-h2-editorial text-on-surface text-[24px]">Préparation</h2>
+<div class="flex flex-col gap-6 relative">
+<!-- Vertical connecting line -->
+<div class="absolute left-[19px] top-6 bottom-6 w-0.5 bg-outline-variant/30"></div>
+<!-- Step 1 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center font-label-bold text-label-bold text-on-surface border-2 border-background">
+                        1
+                    </div>
+<div class="flex flex-col gap-1 pt-1.5">
+<h3 class="font-label-bold text-label-bold text-on-surface">Cuisson de la base</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Faites cuire le quinoa selon les instructions du paquet. Laissez tiédir.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center font-label-bold text-label-bold text-on-surface border-2 border-background">
+                        2
+                    </div>
+<div class="flex flex-col gap-1 pt-1.5">
+<h3 class="font-label-bold text-label-bold text-on-surface">Préparation du poulet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Coupez le blanc de poulet en dés. Faites-le dorer à la poêle avec une cuillère à café d'huile d'olive, du sel et du poivre.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center font-label-bold text-label-bold text-on-surface border-2 border-background">
+                        3
+                    </div>
+<div class="flex flex-col gap-1 pt-1.5">
+<h3 class="font-label-bold text-label-bold text-on-surface">Assemblage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dans un bol, disposez le quinoa en base. Ajoutez le poulet, l'avocat tranché et les tomates cerises coupées en deux. Assaisonnez d'un filet de citron.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest/90 backdrop-blur-lg border-t border-outline-variant/30 px-container-padding py-4 flex flex-col md:flex-row gap-3 z-50 shadow-[0_-4px_20px_0_rgba(22,29,28,0.08)]">
+<button class="w-full flex-1 bg-primary-container text-on-primary-container font-label-bold text-label-bold py-4 px-6 rounded-full flex items-center justify-center gap-2 transition-transform hover:scale-[0.98] active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_circle">add_circle</span>
+            Ajouter au journal
+        </button>
+<button class="w-full md:w-auto px-8 border-2 border-on-surface text-on-surface font-label-bold text-label-bold py-3.5 rounded-full flex items-center justify-center gap-2 transition-colors hover:bg-on-surface/5 active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+            Sauvegarder
+        </button>
+</div>
+</body></html>

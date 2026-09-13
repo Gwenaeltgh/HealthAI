@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthAI Coach - Profil (Alimentation)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7b2f0a",
+                        "primary-fixed-dim": "#4fdbcc",
+                        "secondary-container": "#d7dffd",
+                        "surface-container-high": "#e3eae7",
+                        "on-secondary-container": "#5a627b",
+                        "on-tertiary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#3e465e",
+                        "surface-container": "#e9efed",
+                        "outline": "#6c7a77",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#70f8e8",
+                        "on-tertiary-container": "#762b06",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#4fdbcc",
+                        "inverse-surface": "#2b3230",
+                        "error": "#ba1a1a",
+                        "surface": "#f4fbf8",
+                        "on-secondary-fixed": "#131b30",
+                        "primary": "#006a62",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf2f0",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#2ec4b6",
+                        "secondary-fixed": "#dae2ff",
+                        "on-background": "#161d1c",
+                        "background": "#f4fbf8",
+                        "surface-container-highest": "#dde4e2",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#9a4520",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-variant": "#dde4e2",
+                        "surface-container-low": "#eff5f3",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed-dim": "#bec6e3",
+                        "surface-dim": "#d5dbd9",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161d1c",
+                        "tertiary-container": "#ff9468",
+                        "surface-bright": "#f4fbf8",
+                        "secondary": "#565e77",
+                        "surface-tint": "#006a62",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#004c46",
+                        "on-primary-fixed": "#00201d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1-editorial": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "h2-editorial": ["Newsreader"],
+                        "display-metrics": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "h1-editorial": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h2-editorial": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Hide scrollbar for horizontal scrolling but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FFFCF7] text-on-surface min-h-screen font-body-md pb-[100px] md:pb-0 pt-[72px]">
+<!-- TopAppBar -->
+<header class="bg-[#FFFCF7] text-[#2EC4B6] docked full-width top-0 border-b border-[#1A2238]/10 flat no shadows flex justify-between items-center w-full px-6 py-4 fixed z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-container">
+<img alt="Avatar L'Avocat" class="w-full h-full object-cover" data-alt="A small 2D illustrated avatar of a cute avocado mascot with a friendly face, designed in a flat vector style with clean lines. It uses a light green and dark green palette, fitting a modern health app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaeVWW4r9u8T9aAcOhciGeIL3N0deXSXjnhljnM2jSBybJAKCagLcj66JGL-U9FoKNAuH6kO-N-o2qBirycmmC8dGagb6RfmqG0da1CBQy2ecor6kTM59kSxYuFyLhJZXU3uSKzFkidAP99C3YUSKdtnzqgBqT63Pfh-kloyD7y-8oEDIzJXdvrptPzX9uLyzxGRTHwTSzAYcksAjdFg58T4wJYhgjvA6NK0v6Oiq-LFhP11Kej6KnjrftTylh5vby3hwEBNlVt6oR"/>
+</div>
+<h1 class="font-serif text-lg font-bold text-[#1A2238] font-black">HealthAI Coach</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-[#1A2238]/60 hover:bg-[#2EC4B6]/10 transition-colors scale-95 active:duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-container-padding py-section-gap space-y-section-gap">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center justify-center space-y-base text-center">
+<h2 class="font-h1-editorial text-h1-editorial text-[#1A2238]">Mon Profil</h2>
+<p class="font-body-md text-body-md text-[#1A2238]/70">Gère tes préférences et suis ton évolution.</p>
+</section>
+<!-- Segmented Control (Tabs) -->
+<div class="flex bg-surface-container rounded-full p-1 mx-auto max-w-md">
+<a class="flex-1 py-2 px-4 rounded-full text-center font-label-bold text-label-bold text-[#1A2238]/60 hover:bg-[#2EC4B6]/10 transition-colors" href="#">Général</a>
+<a class="flex-1 py-2 px-4 rounded-full text-center font-label-bold text-label-bold bg-[#2EC4B6] text-white shadow-sm transition-colors" href="#">Alimentation</a>
+<a class="flex-1 py-2 px-4 rounded-full text-center font-label-bold text-label-bold text-[#1A2238]/60 hover:bg-[#2EC4B6]/10 transition-colors" href="#">Activité</a>
+</div>
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Calorie Card -->
+<div class="bg-white rounded-2xl p-container-padding flex flex-col justify-between border border-[#1A2238]/5 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+<div class="flex items-center gap-2 mb-stack-gap">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<span class="font-label-bold text-label-bold text-[#1A2238]/70">Moyenne kcal</span>
+</div>
+<div>
+<div class="font-display-metrics text-display-metrics text-[#1A2238]">1847</div>
+<div class="font-body-md text-body-md text-[#1A2238]/50 mt-1">/ jour cette semaine</div>
+</div>
+</div>
+<!-- Goal Card -->
+<div class="bg-white rounded-2xl p-container-padding flex flex-col justify-between border border-[#1A2238]/5 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#1A2238]/5 rounded-full blur-2xl group-hover:bg-[#1A2238]/10 transition-all"></div>
+<div class="flex items-center gap-2 mb-stack-gap">
+<div class="w-8 h-8 rounded-full bg-[#1A2238]/5 flex items-center justify-center text-[#1A2238]">
+<span class="material-symbols-outlined text-[18px]">track_changes</span>
+</div>
+<span class="font-label-bold text-label-bold text-[#1A2238]/70">Objectif</span>
+</div>
+<div>
+<div class="font-display-metrics text-display-metrics text-[#1A2238]">5<span class="text-h2-editorial text-[#1A2238]/40">/7</span></div>
+<div class="font-body-md text-body-md text-[#1A2238]/50 mt-1">jours atteints</div>
+</div>
+</div>
+<!-- Streak Card -->
+<div class="col-span-2 bg-[#1A2238] rounded-2xl p-container-padding flex flex-row items-center justify-between relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2EC4B6]/20 opacity-50"></div>
+<div class="relative z-10 flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#FF9468]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-bold text-label-bold text-white/80 uppercase tracking-wider">Streak actuelle</span>
+</div>
+<div class="font-display-metrics text-display-metrics text-white">12 <span class="font-h2-editorial text-h2-editorial text-white/60">Jours</span></div>
+<p class="font-body-md text-body-md text-white/70 mt-1">Tu es sur une excellente lancée !</p>
+</div>
+<div class="relative z-10 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center border border-white/20 backdrop-blur-sm">
+<img alt="Avatar L'Avocat heureux" class="w-14 h-14 object-cover rounded-full" data-alt="A 2D illustrated avatar of a cute avocado mascot celebrating, looking happy and energetic, flat vector style, light and dark green palette, modern health app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqhlh2vYqNJxPPP3IN_utloC5cK5ElbigcVXXo_eU9KTV1lixt3L-kh7_z93nU1JVOaA-a4gAZLRhxeOKHfoywX814sPCtYE0QGXDhmbeYJJYuoeylVqsscZiUL-648zK-K9fHr-BHs2GMvkLlx6czYROyNNr1M8RREIl4GkyuWbVmZ0QS44D-b1ncCcieM04CovtmdaN_OXqzUGFTrx7boV6akoajsp-yKdUpAwrHKYhV3ec8NaUn2CYMYbPcIOutE7WPmGZYsmPY"/>
+</div>
+</div>
+</section>
+<!-- Macros Breakdown -->
+<section class="bg-white rounded-3xl p-container-padding border border-[#1A2238]/5">
+<div class="flex justify-between items-end mb-stack-gap">
+<div>
+<h3 class="font-h2-editorial text-h2-editorial text-[#1A2238]">Répartition des macros</h3>
+<p class="font-body-md text-body-md text-[#1A2238]/60 mt-1">Moyenne hebdomadaire</p>
+</div>
+</div>
+<!-- Stacked Bar -->
+<div class="h-8 w-full rounded-full flex overflow-hidden mb-4">
+<div class="bg-[#1A2238] h-full flex items-center justify-center" style="width: 45%;"></div>
+<div class="bg-[#2EC4B6] h-full flex items-center justify-center border-l-2 border-white" style="width: 35%;"></div>
+<div class="bg-[#FF9468] h-full flex items-center justify-center border-l-2 border-white" style="width: 20%;"></div>
+</div>
+<!-- Legend -->
+<div class="flex justify-between items-center px-2">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#1A2238]"></div>
+<span class="font-label-bold text-label-bold text-[#1A2238]">Glucides <span class="text-[#1A2238]/50 ml-1">45%</span></span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#2EC4B6]"></div>
+<span class="font-label-bold text-label-bold text-[#1A2238]">Protéines <span class="text-[#1A2238]/50 ml-1">35%</span></span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#FF9468]"></div>
+<span class="font-label-bold text-label-bold text-[#1A2238]">Lipides <span class="text-[#1A2238]/50 ml-1">20%</span></span>
+</div>
+</div>
+</section>
+<!-- Favorite Foods (Horizontal Scroll) -->
+<section>
+<div class="flex justify-between items-center mb-stack-gap">
+<h3 class="font-h2-editorial text-h2-editorial text-[#1A2238]">Tes aliments favoris</h3>
+<button class="font-label-bold text-label-bold text-primary-container hover:text-[#1A2238] transition-colors">Voir tout</button>
+</div>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-4 -mx-container-padding px-container-padding md:mx-0 md:px-0">
+<!-- Card 1 -->
+<div class="min-w-[200px] bg-white rounded-2xl p-4 border border-[#1A2238]/5 flex flex-col items-center text-center hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-full bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Avocat" class="w-full h-full object-cover" data-alt="A close up, high quality photo of a perfectly ripe avocado half resting on a clean, minimal white marble surface. Bright, natural lighting, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXf1_HO35G3BXEm43_fStNHuMwnviP8sDRnwicSryjg3jEKY-GL3GNx4J7Sjd6Wj8o-72GSqk_hXuY1N4819qx5vc0GWycsAWtI5tApEPku08gjR-3JHl4ES8jZMZ_t4BRkW-w6uGhnTelXgVtx0zDhkAXqUS82JeCbiLyjefIao7cW2JnMWtoughxj4rwBHhDEZ-5XWGGK5-eXI-dZ_q8Domkx56BsPngpnNpWtSGDqhReVhSJtB9TsYPTKHrI6HEIuc21Zl5XiGf"/>
+</div>
+<h4 class="font-label-bold text-label-bold text-[#1A2238]">Avocat</h4>
+<p class="font-body-md text-body-md text-[#1A2238]/50 text-sm">160 kcal / 100g</p>
+<div class="mt-3 bg-primary-container/10 text-primary-container px-3 py-1 rounded-full font-label-bold text-[10px] uppercase tracking-wider">
+                        Lipides +
+                    </div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[200px] bg-white rounded-2xl p-4 border border-[#1A2238]/5 flex flex-col items-center text-center hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-full bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Flocons d'avoine" class="w-full h-full object-cover" data-alt="A small rustic ceramic bowl filled with raw rolled oats, sitting on a light wooden table. Soft morning sunlight illuminating the grains. Minimalist and healthy vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZKMlvus29I_H_bg7fJuuzNMloz5luvu8ZW8Vuazb3r_HSYQfbv6DkS0D0CmEe2H0zMkqfQv_XWl4N9JUYuXg2IVc6pP_lIb5MbWAEG6_6sZ5XKBn5-BJxEgd7AZN5_inc2VQrGaThXiPpbDRCADzvTPazm5zJuRk5ZrGVe5FFH68_0GD3BA5HndJ7vosJYRtLR_UFJYeh-ovoInDInagMI8SGJtsehzw6thIXljV1ivb2cvQ30JLb777jkiQItbpGKaxPFbPH7hl1"/>
+</div>
+<h4 class="font-label-bold text-label-bold text-[#1A2238]">Flocons d'avoine</h4>
+<p class="font-body-md text-body-md text-[#1A2238]/50 text-sm">389 kcal / 100g</p>
+<div class="mt-3 bg-[#1A2238]/5 text-[#1A2238] px-3 py-1 rounded-full font-label-bold text-[10px] uppercase tracking-wider">
+                        Glucides +
+                    </div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[200px] bg-white rounded-2xl p-4 border border-[#1A2238]/5 flex flex-col items-center text-center hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-full bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Poulet" class="w-full h-full object-cover" data-alt="Cooked grilled chicken breast sliced on a white plate, garnished with a sprig of parsley. Clean, clinical yet appetizing food photography style, well-lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD059iZHelUYp_DNsi8hua9G7Ou8dq-UzmgiDuzxsDen4d1YjHR2w2IzsUbc1NtLyVoTGwUyNSZNeAIdSQlae7_Vx_DGYHV-VZrdGysm46EJBgIdyj0yjN5lavVXREwdzoH-64LOVZjQZ9-I8VMIbofsy5_Eq0BFm-A45I22bzS1rl3Y2xghWvuRybxGd1QFASxVByWiZfRu1U965cNZZGQYPOmpoysr-8U09MQhFYlJQUXBzY7E5qydFXgice09YLzYeTcC6pD8WGN"/>
+</div>
+<h4 class="font-label-bold text-label-bold text-[#1A2238]">Blanc de poulet</h4>
+<p class="font-body-md text-body-md text-[#1A2238]/50 text-sm">165 kcal / 100g</p>
+<div class="mt-3 bg-[#1A2238]/5 text-[#1A2238] px-3 py-1 rounded-full font-label-bold text-[10px] uppercase tracking-wider">
+                        Protéines +
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-white dark:bg-slate-900 text-[#2EC4B6] dark:text-[#2EC4B6] font-sans text-[11px] font-bold uppercase tracking-wider docked full-width bottom-0 rounded-t-[32px] border-t border-[#1A2238]/5 dark:border-white/5 shadow-[0_-4px_20px_0_rgba(26,34,56,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3">
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">psychology</span>
+<span>Coach</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">menu_book</span>
+<span>Journal</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">forum</span>
+<span>Feed</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#1A2238]/40 dark:text-white/40 px-5 py-2 hover:text-[#2EC4B6] transition-all">
+<span class="material-symbols-outlined mb-1 text-[24px]">smart_toy</span>
+<span>IA</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#2EC4B6] text-white rounded-full px-5 py-2 hover:text-[#2EC4B6] transition-all Active: scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: 'FILL' 1;">person</span>
+<span>Profil</span>
+</button>
+</nav>
+</body></html>

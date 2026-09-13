@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>HealthAI Coach Backoffice</title>
+    <script>
+        (function () {
+            try {
+                var prefs = JSON.parse(localStorage.getItem('healthai.backoffice.preferences') || '{}');
+                var theme = prefs.theme === 'dark' || prefs.theme === 'light'
+                    ? prefs.theme
+                    : (localStorage.getItem('healthai.backoffice.theme') === 'dark'
+                        ? 'dark'
+                        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+                var language = localStorage.getItem('healthai.backoffice.language') === 'en' ? 'en' : 'fr';
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.lang = language;
+                document.documentElement.style.colorScheme = theme;
+                document.body && (document.body.dataset.theme = theme);
+            } catch (error) {
+                // Ignore bootstrapping failures; React will reconcile the final state.
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="/src/app/styles/globals.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

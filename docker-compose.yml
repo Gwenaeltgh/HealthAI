@@ -1,0 +1,100 @@
+services:
+  app:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./app:/app
+      - healthia-app-node-modules:/app/node_modules
+    container_name: healthia-app
+    ports:
+      - '15001:15001'
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:15002}
+      VITE_USE_REAL_API: ${VITE_USE_REAL_API:-true}
+      CHOKIDAR_USEPOLLING: 'true'
+      CHOKIDAR_INTERVAL: '150'
+    command: sh -c "npm ci && npm run dev -- --host 0.0.0.0 --port 15001"
+    depends_on:
+      api:
+        condition: service_started
+
+  api:
+    image: node:20-alpine
+    working_dir: /srv
+    volumes:
+      - ./:/srv
+      - healthia-api-node-modules:/srv/node_modules
+    container_name: healthia-api
+    ports:
+      - '15002:15002'
+    environment:
+      PORT: 15002
+      # If DATABASE_URL is provided externally, it wins.
+      DATABASE_URL: ${DATABASE_URL:-mysql://${MYSQL_USER:-healthia}:${MYSQL_PASSWORD:-healthia}@db:3306/${MYSQL_DATABASE:-healthia_api}}
+      TRAINING_DATABASE_URL: ${TRAINING_DATABASE_URL:-mysql://${MYSQL_USER:-healthia}:${MYSQL_PASSWORD:-healthia}@db:3306/healthia}
+      IA_BASE_URL: ${IA_BASE_URL:-http://ia:15003}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:15001,http://127.0.0.1:15001}
+    command: sh -c "npm ci && npm run prisma:generate && npm run prisma:push -- --accept-data-loss && node api/server.mjs"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  ia:
+    build:
+      context: .
+      dockerfile: docker/ia.Dockerfile
+    working_dir: /srv
+    volumes:
+      - ./:/srv
+    container_name: healthia-ia
+    ports:
+      - '15003:15003'
+    environment:
+      PYTHONUNBUFFERED: '1'
+    command: python -m uvicorn api.ia_api:app --host 0.0.0.0 --port 15003
+
+  db:
+    image: mysql:8.0
+    container_name: healthia-db
+    restart: unless-stopped
+    environment:
+      # MySQL credentials should be provided via .env or an external secrets manager
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-healthia_api}
+      MYSQL_USER: ${MYSQL_USER:-healthia}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-healthia}
+    ports:
+      - '3306:3306'
+    volumes:
+      - healthia-mysql-data:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  ingest:
+    profiles: ["tools"]
+    image: python:3.11-slim
+    working_dir: /srv
+    volumes:
+      - ./:/srv
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-mysql://${MYSQL_USER:-healthia}:${MYSQL_PASSWORD:-healthia}@db:3306/${MYSQL_DATABASE:-healthia_api}}
+      TRAINING_DATABASE_URL: ${TRAINING_DATABASE_URL:-mysql://${MYSQL_USER:-healthia}:${MYSQL_PASSWORD:-healthia}@db:3306/healthia}
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_USER: ${MYSQL_USER:-healthia}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-healthia}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-healthia_api}
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "pip install --no-cache-dir -r requirements.txt && python medaillon/ingest/gold_to_normalized.py"
+
+volumes:
+  healthia-mysql-data:
+  healthia-app-node-modules:
+  healthia-api-node-modules:
+

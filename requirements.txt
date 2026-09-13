@@ -1,0 +1,20 @@
+# Kaggle Dataset Downloader - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Kaggle official API client
+kaggle>=1.6.0
+
+# Optional: for loading .env files (script has built-in parser but this is more robust)
+# python-dotenv>=1.0.0
+ 
+# Database ingestion
+sqlalchemy>=2.0.0
+pymysql>=1.0.3
+cryptography>=40.0
+
+# IA / ML API
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pandas>=2.0.0
+joblib>=1.3.0
+scikit-learn>=1.3.0
